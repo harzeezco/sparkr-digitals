@@ -34,6 +34,9 @@ const config = {
         green: {
           600: '#00542D',
         },
+        gray: {
+          100: 'hsl(0, 0%, 100%)',
+        },
       },
       keyframes: {
         'accordion-down': {
@@ -46,6 +49,7 @@ const config = {
         },
       },
       fontFamily: {
+        satoshi: ['var(--font-satoshi)'],
         bricolage: ['var(--font-bricolage)'],
       },
       animation: {

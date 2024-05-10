@@ -5,6 +5,7 @@ const Logo = () => (
   <Link href='/'>
     <Image
       alt='Sparkr Digitals Logo'
+      className='max-h-[40px]'
       height={36}
       src='/icons/icon-logo.svg'
       width={138}

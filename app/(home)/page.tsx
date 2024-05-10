@@ -1,4 +1,8 @@
-import HeroSection from '@/pages/home-page/hero-section';
+import BrandStories from '@/pages/home-page/brand-stories';
+import CaseStudy from '@/pages/home-page/case-study';
+import ClientStories from '@/pages/home-page/client-stories';
+import Hero from '@/pages/home-page/hero';
+import SuccessfulBrands from '@/pages/home-page/successful-brands';
 import Image from 'next/image';
 
 export default function Home() {
@@ -11,7 +15,11 @@ export default function Home() {
         src='/images/stroke.webp'
         width={640}
       />
-      <HeroSection />
+      <Hero />
+      <CaseStudy />
+      <ClientStories />
+      <BrandStories />
+      <SuccessfulBrands />
     </main>
   );
 }

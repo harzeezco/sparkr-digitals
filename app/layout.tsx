@@ -1,20 +1,9 @@
+import Footer from '@/layouts/footer';
 import Header from '@/layouts/header';
 import type { Metadata } from 'next';
-import { Bricolage_Grotesque } from 'next/font/google';
-import localFont from 'next/font/local';
 
+import { local } from './font';
 import './globals.css';
-
-const bricolage = Bricolage_Grotesque({
-  subsets: ['latin'],
-  weight: ['300', '400', '500'],
-  variable: '--font-bricolage',
-});
-
-const myFont = localFont({
-  src: '../public/font/Satoshi-Regular.woff',
-  display: 'swap',
-});
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -29,10 +18,11 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <body
-        className={`${myFont.className} ${bricolage.variable} relative bg-[#EDF5F4] text-[#00542D]`}
+        className={`${local.className} relative bg-[#EDF5F4] text-[#00542D]`}
       >
         <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );
