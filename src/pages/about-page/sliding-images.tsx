@@ -1,15 +1,27 @@
 'use client';
 
 import { InfiniteMovingCards } from '@/components/infinite-moving-cards';
+import Image from 'next/image';
 
 export function InfiniteMovingCardsDemo() {
   return (
     <div className='relative flex flex-col items-center justify-center overflow-hidden rounded-md antialiased'>
-      <InfiniteMovingCards
-        direction='right'
-        items={testimonials}
-        speed='slow'
-      />
+      <InfiniteMovingCards direction='right' speed='slow'>
+        {testimonials.map(({ alt, size, src }) => (
+          <li
+            key={alt}
+            className='relative max-w-full shrink-0 rounded-2xl border border-b-0'
+          >
+            <Image
+              alt={alt}
+              className='h-full max-h-[450px] rounded-[12px]'
+              height={450}
+              src={`/images/${src}`}
+              width={size}
+            />
+          </li>
+        ))}
+      </InfiniteMovingCards>
     </div>
   );
 }
