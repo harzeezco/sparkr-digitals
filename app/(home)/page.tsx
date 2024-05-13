@@ -1,6 +1,6 @@
+import ClientStories from '@/components/client-stories';
 import BrandStories from '@/pages/home-page/brand-stories';
 import CaseStudy from '@/pages/home-page/case-study';
-import ClientStories from '@/pages/home-page/client-stories';
 import Hero from '@/pages/home-page/hero';
 import SuccessfulBrands from '@/pages/home-page/successful-brands';
 import Image from 'next/image';
