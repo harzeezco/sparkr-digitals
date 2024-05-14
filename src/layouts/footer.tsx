@@ -99,17 +99,17 @@ export const FOOTER_LINKS = [
       {
         id: 0,
         label: 'Home',
-        href: '',
+        href: '/',
       },
       {
         id: 1,
         label: 'About Us',
-        href: '',
+        href: '/about',
       },
       {
         id: 2,
         label: 'Services',
-        href: '',
+        href: '/service',
       },
       {
         id: 3,
@@ -119,7 +119,7 @@ export const FOOTER_LINKS = [
       {
         id: 4,
         label: 'Works',
-        href: '',
+        href: '/work',
       },
     ],
   },
@@ -130,27 +130,27 @@ export const FOOTER_LINKS = [
       {
         id: 0,
         label: 'Pricing',
-        href: '',
+        href: '/pricing',
       },
       {
         id: 1,
         label: 'Careers',
-        href: '',
+        href: '/career',
       },
       {
         id: 2,
         label: 'Blogs',
-        href: '',
+        href: '/blog',
       },
       {
         id: 3,
         label: 'Contact',
-        href: '',
+        href: '/contact',
       },
       {
         id: 3,
         label: 'FAQs',
-        href: '',
+        href: '/faq',
       },
     ],
   },

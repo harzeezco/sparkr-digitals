@@ -29,7 +29,7 @@ const OurMission = () => (
       expectations.
     </p>
 
-    <div className='mt-16 grid grid-cols-2 items-center bg-green-100'>
+    <div className='mt-16 grid grid-cols-2 items-center rounded-[12px] bg-green-100'>
       {MISSIONS.map(({ desc, icon, title }, idx) => (
         <div
           className='p-8'
