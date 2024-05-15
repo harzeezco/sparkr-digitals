@@ -27,7 +27,7 @@ const Vision = () => (
       With a bold vision, the journey began in 2019.
     </h1>
 
-    <div className='mt-16 grid max-w-6xl  grid-cols-2 gap-7'>
+    <div className='mt-16 grid max-w-6xl grid-cols-1 gap-7 md:grid-cols-2'>
       {VISION.map(({ desc, src, title }) => (
         <div className='relative w-full cursor-pointer overflow-hidden transition-all duration-500'>
           <Image

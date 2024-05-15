@@ -53,7 +53,7 @@ const CaseStudy = () => (
       <hr className='border border-[#121718]/70' />
     </Link>
 
-    <div className='mt-16 grid max-w-6xl  grid-cols-2 gap-7'>
+    <div className='mt-16 grid max-w-6xl grid-cols-1 gap-7 md:grid-cols-2'>
       {CASESTUDY.map(({ desc, src, title, type }) => (
         <div className='group relative w-full cursor-pointer overflow-hidden transition-all duration-500 before:absolute before:inset-0 before:z-30 before:size-full before:transition before:duration-300 hover:transition-all before:hover:bg-black/70'>
           <Image

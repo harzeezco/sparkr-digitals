@@ -1,7 +1,7 @@
+import { InfiniteMovingCardsDemo } from '@/components/sliding-images';
 import { cn } from '@/lib/cn';
 
 import { bricolage } from '../../../app/font';
-import { InfiniteMovingCardsDemo } from './sliding-images';
 
 const HeroSection = () => (
   <section className='mt-32'>

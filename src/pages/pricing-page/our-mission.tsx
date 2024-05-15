@@ -1,3 +1,4 @@
+/* eslint-disable unicorn/no-negated-condition */
 import { cn } from '@/lib/cn';
 import Image from 'next/image';
 
@@ -24,8 +25,9 @@ const OurMission = () => (
         <div
           className='p-8'
           style={{
-            borderBottom: idx === 0 || idx === 1 ? '1px' : '0px',
-            borderLeft: idx === 1 || idx === 3 ? '1px' : '0px',
+            borderBottom:
+              idx === 0 || idx === 1 || idx === 2 ? '1px' : '0px',
+            borderLeft: idx === 0 || idx === 3 ? '0px' : '1px',
             borderStyle: 'solid',
             borderColor: '#0a0e0e',
           }}
