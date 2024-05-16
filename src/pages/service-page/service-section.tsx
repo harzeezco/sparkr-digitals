@@ -24,7 +24,7 @@ const ServiceSection = () => (
       <hr className='border border-[#121718]/70' />
     </Link>
 
-    <div className='mt-16 grid grid-cols-3 items-center bg-green-100'>
+    <div className='mt-16 grid grid-cols-1 items-center rounded-[12px] bg-green-100 sm:grid-cols-2 lg:grid-cols-3'>
       {MISSIONS.map(({ desc, icon, title }) => (
         <div className='p-8'>
           <Image
@@ -34,7 +34,7 @@ const ServiceSection = () => (
             width={45}
           />
 
-          <h2 className='mb-5 mt-4 font-bricolage text-2xl font-semibold'>
+          <h2 className='mb-5 mt-4 font-bricolage text-xl font-semibold md:text-2xl'>
             {title}
           </h2>
 

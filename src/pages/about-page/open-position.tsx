@@ -8,7 +8,7 @@ import { bricolage } from '../../../app/font';
 
 const OpenPosition = () => (
   <section className='container mt-24 flex flex-col gap-y-24'>
-    <div className='grid grid-cols-2 place-items-center gap-x-20'>
+    <div className='grid grid-cols-1 place-items-center gap-x-20 gap-y-10 md:grid-cols-2'>
       <div className='flex flex-col gap-y-5'>
         <h1
           className={cn(
@@ -48,16 +48,16 @@ const OpenPosition = () => (
       />
     </div>
 
-    <div className='grid grid-cols-2 place-items-center gap-x-20'>
+    <div className='grid grid-cols-1 place-items-center gap-x-20 gap-y-10 md:grid-cols-2'>
       <Image
         alt='open position'
-        className='max-h-[550px] rounded-[12px] object-cover'
+        className='max-h-[550px] rounded-[12px] object-cover max-md:order-2'
         height={450}
         src='/images/open-position1.webp'
         width={440}
       />
 
-      <div className='flex flex-col gap-y-5'>
+      <div className='flex flex-col gap-y-5 max-md:order-1'>
         <h1
           className={cn(
             'text-green-600 text-3xl font-light sm:text-4xl lg:text-5xl',

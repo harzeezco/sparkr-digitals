@@ -68,7 +68,7 @@ const OurStaff = () => (
       <hr className='border border-[#121718]/70' />
     </Link>
 
-    <div className='mt-16 grid max-w-6xl grid-cols-4 gap-7'>
+    <div className='mt-16 grid max-w-6xl grid-cols-2 gap-7 sm:grid-cols-3 lg:grid-cols-4'>
       {VISION.map(({ desc, src, title }) => (
         <div className='relative w-full cursor-pointer overflow-hidden transition-all duration-500'>
           <Image
@@ -82,13 +82,13 @@ const OurStaff = () => (
           <div className='flex-col'>
             <h2
               className={cn(
-                'mt-4 font-bricolage text-2xl font-semibold',
+                'mt-4 font-bricolage text-xl md:text-2xl font-semibold',
                 bricolage.className,
               )}
             >
               {title}
             </h2>
-            <p className='text-lg opacity-70'>{desc}</p>
+            <p className='opacity-70 md:text-lg'>{desc}</p>
           </div>
         </div>
       ))}

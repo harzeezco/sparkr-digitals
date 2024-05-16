@@ -5,12 +5,12 @@ const Roadmap = () => (
   <section className='container mt-24 flex flex-col items-center'>
     <div className='mx-auto max-w-[900px]'>
       {MISSIONS.map(({ desc, icon, title }, idx) => (
-        <div className='grid grid-cols-[auto_1fr] gap-x-32 p-8'>
+        <div className='grid grid-cols-1 gap-x-32 gap-y-6 p-8 md:grid-cols-[auto_1fr]'>
           <div className=''>
             <div className='relative h-[50px]'>
               <div
                 className={cn(
-                  'absolute bottom-full left-1/2 mx-auto h-16 w-[3px] -translate-x-1/2 bg-black/10',
+                  'absolute bottom-full left-1/2 max-sm:hidden mx-auto h-16 w-[3px] -translate-x-1/2 bg-black/10',
                   idx === 0 ? 'hidden' : '',
                 )}
               />
@@ -23,14 +23,14 @@ const Roadmap = () => (
             </div>
             <div
               className={cn(
-                'mx-auto h-20 w-[3px] bg-black/10',
+                'mx-auto h-20 w-[3px] max-sm:hidden bg-black/10',
                 idx === 6 ? 'hidden' : '',
               )}
             />
           </div>
 
           <div>
-            <h2 className='mb-5 font-bricolage text-2xl font-semibold'>
+            <h2 className='mb-3 font-bricolage text-2xl font-semibold'>
               {title}
             </h2>
 

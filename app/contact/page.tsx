@@ -18,8 +18,8 @@ const FAQPage = () => (
           Do you have a project you need help with? Contact us!
         </h1>
 
-        <div className='mb-20 flex items-center gap-x-24'>
-          <Link className='mt-6 font-medium' href='/case-study'>
+        <div className='mb-20 flex gap-x-24 max-sm:flex-col sm:items-center'>
+          <Link className='mt-6 w-fit font-medium' href='/case-study'>
             <AnimatedLink
               className='transition duration-200 hover:text-green-500'
               title='hello@sparkrstudio.com'
@@ -27,7 +27,7 @@ const FAQPage = () => (
             <hr className='border border-[#121718]/70' />
           </Link>
 
-          <Link className='mt-6 font-medium' href='/case-study'>
+          <Link className='mt-6 w-fit font-medium' href='/case-study'>
             <AnimatedLink
               className='transition duration-200 hover:text-green-500'
               title='+234 818 255 319 55'

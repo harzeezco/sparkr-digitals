@@ -64,7 +64,7 @@ export function ContactForm() {
   return (
     <Form {...form}>
       <form
-        className='mx-auto mt-24 max-w-4xl space-y-5'
+        className='mx-auto mt-20 max-w-4xl space-y-5'
         onSubmit={form.handleSubmit(onSubmit)}
       >
         <div className='mb-4 flex flex-col space-y-2 md:flex-row md:space-x-4 md:space-y-0'>
@@ -133,7 +133,7 @@ export function ContactForm() {
           >
             <AnimatedLink
               className='font-bricolage text-xl font-light'
-              title="Send Message  (I won't keep you waiting)"
+              title='Send Message'
             />
           </Button>
         </div>

@@ -20,7 +20,7 @@ const OurMission = () => (
       your design. Seriously.
     </p>
 
-    <div className='mt-16 grid grid-cols-3 items-center rounded-[12px] bg-white'>
+    <div className='mt-16 grid grid-cols-1 items-center rounded-[12px] bg-white sm:grid-cols-2 lg:grid-cols-3'>
       {MISSIONS.map(({ desc, icon, title }, idx) => (
         <div
           className='p-8'
