@@ -143,15 +143,15 @@ export function DrawerBar({
 }
 
 const Header = () => (
-  <header>
-    <div className='container flex items-center justify-between py-4'>
+  <header className='fixed inset-x-0 top-0 z-[9999] bg-[#EDF5F4]'>
+    <div className='container flex items-center justify-between py-3'>
       <Logo />
 
       <nav className='max-lg:hidden'>
         <ul className='flex items-center gap-x-10'>
           {NAVLINKS.map(({ href, name }) => (
             <Link key={name} href={href}>
-              <li className='transition-all duration-200 hover:text-green-500 active:text-green-500'>
+              <li className='text-[#000F06] transition-all duration-200 hover:text-green-500 active:text-green-500'>
                 <AnimatedLink title={name} />
               </li>
             </Link>
@@ -175,7 +175,7 @@ const Header = () => (
       <div className='max-lg:hidden'>
         <Button
           className='bg-primary transition-all hover:bg-green-600 active:bg-green-600'
-          size='sm'
+          size='lg'
         >
           <AnimatedLink title="Let's Talk" />
         </Button>

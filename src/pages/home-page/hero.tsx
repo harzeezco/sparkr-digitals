@@ -1,11 +1,19 @@
 import AnimatedLink from '@/components/animated-text';
 import { Button } from '@/components/ui/button';
+import { cn } from '@/lib/cn';
 import Image from 'next/image';
 
+import { bricolage } from '../../../app/font';
+
 const HeroSection = () => (
-  <section className='container mt-16'>
+  <section className='container mt-32'>
     <div className='mx-auto max-w-4xl space-y-4'>
-      <h1 className='text-center font-bricolage text-4xl font-light md:text-5xl lg:text-6xl'>
+      <h1
+        className={cn(
+          'text-center text-4xl font-light md:text-5xl lg:text-6xl',
+          bricolage.className,
+        )}
+      >
         Be the Brand that{' '}
         <span className='text-primary'>Customers</span>{' '}
         <span className='text-primary'>want</span> and{' '}
