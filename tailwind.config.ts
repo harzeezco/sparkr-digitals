@@ -38,6 +38,7 @@ const config = {
       colors: {
         primary: '#00C537',
         green: {
+          100: '#D1FFDE',
           600: '#00542D',
         },
         gray: {
