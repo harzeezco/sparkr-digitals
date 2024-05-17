@@ -121,7 +121,7 @@ export const FOOTER_LINKS = [
       {
         id: 4,
         label: 'Works',
-        href: '/work',
+        href: '/works',
       },
     ],
   },
