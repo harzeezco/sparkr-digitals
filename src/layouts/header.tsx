@@ -142,46 +142,59 @@ export function DrawerBar({
   );
 }
 
-const Header = () => (
-  <header className='fixed inset-x-0 top-0 z-[9999] bg-[#EDF5F4]'>
-    <div className='container flex items-center justify-between py-3'>
-      <Logo />
+const Header = () => {
+  const pathname = usePathname();
 
-      <nav className='max-lg:hidden'>
-        <ul className='flex items-center gap-x-10'>
-          {NAVLINKS.map(({ href, name }) => (
-            <Link key={name} href={href}>
-              <li className='text-[#000F06] transition-all duration-200 hover:text-green-500 active:text-green-500'>
-                <AnimatedLink title={name} />
-              </li>
-            </Link>
-          ))}
-        </ul>
-      </nav>
+  return (
+    <header className='fixed inset-x-0 top-0 z-[9999] bg-[#EDF5F4]'>
+      <div className='container flex items-center justify-between py-3'>
+        <Logo />
 
-      <div className='lg:hidden'>
-        <DrawerBar>
-          <button className='bg-[#DFFDE0] p-2' type='button'>
-            <Image
-              alt='hamburger'
-              height={25}
-              src='/icons/icon-hamburger.svg'
-              width={25}
-            />
-          </button>
-        </DrawerBar>
+        <nav className='max-lg:hidden'>
+          <ul className='flex items-center gap-x-10'>
+            {NAVLINKS.map(({ href, name }) => {
+              const isActive = pathname === href;
+
+              return (
+                <Link key={name} href={href}>
+                  <li
+                    className={cn(
+                      'text-[#000F06] transition-all duration-200 hover:text-green-500 active:text-green-500',
+                      isActive ? 'text-green-500' : '',
+                    )}
+                  >
+                    <AnimatedLink title={name} />
+                  </li>
+                </Link>
+              );
+            })}
+          </ul>
+        </nav>
+
+        <div className='lg:hidden'>
+          <DrawerBar>
+            <button className='bg-[#DFFDE0] p-2' type='button'>
+              <Image
+                alt='hamburger'
+                height={25}
+                src='/icons/icon-hamburger.svg'
+                width={25}
+              />
+            </button>
+          </DrawerBar>
+        </div>
+
+        <div className='max-lg:hidden'>
+          <Button
+            className='bg-primary transition-all hover:bg-green-600 active:bg-green-600'
+            size='lg'
+          >
+            <AnimatedLink title="Let's Talk" />
+          </Button>
+        </div>
       </div>
-
-      <div className='max-lg:hidden'>
-        <Button
-          className='bg-primary transition-all hover:bg-green-600 active:bg-green-600'
-          size='lg'
-        >
-          <AnimatedLink title="Let's Talk" />
-        </Button>
-      </div>
-    </div>
-  </header>
-);
+    </header>
+  );
+};
 
 export default Header;
