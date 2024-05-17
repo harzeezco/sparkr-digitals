@@ -114,7 +114,7 @@ export const FOOTER_LINKS = [
       {
         id: 3,
         label: 'Process',
-        href: '',
+        href: '/process',
       },
       {
         id: 4,
