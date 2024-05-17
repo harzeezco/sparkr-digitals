@@ -18,7 +18,7 @@ const ClientStories = () => {
     <section className='mt-24'>
       <h1
         className={cn(
-          'mx-auto max-w-2xl text-center text-3xl font-light sm:text-4xl lg:text-5xl',
+          'mx-auto max-w-2xl text-center text-3xl font-light sm:text-4xl lg:text-5xl max-sm:px-6',
           bricolage.className,
         )}
       >

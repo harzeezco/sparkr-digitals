@@ -18,7 +18,7 @@ const ClientStories = () => (
     <div className='relative mt-12 flex flex-col items-center justify-center overflow-hidden rounded-md antialiased'>
       <InfiniteMovingCards direction='right' speed='slow'>
         {TESTIMONIALS.map(({ alt, job, name, src, text }) => (
-          <div className='w-full max-w-[450px] rounded-[12px] bg-white p-10'>
+          <div className='w-full max-w-[450px] rounded-[12px] bg-white p-4 md:p-10'>
             <div className='grid grid-cols-[auto_1fr] place-items-center gap-3'>
               <Image
                 alt={alt}
@@ -33,7 +33,7 @@ const ClientStories = () => (
               </div>
             </div>
 
-            <p className='mt-7 text-lg'>{text}</p>
+            <p className='mt-7 md:text-lg'>{text}</p>
           </div>
         ))}
       </InfiniteMovingCards>

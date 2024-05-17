@@ -25,7 +25,7 @@ const HeroSection = () => (
         do.
       </p>
 
-      <Button className='mb-3 bg-primary px-20 py-4 transition-all hover:bg-green-600 active:bg-green-600'>
+      <Button className='mb-3 bg-primary px-20 py-4 transition-all hover:bg-green-600 active:bg-green-600 lg:hidden'>
         <AnimatedLink
           className='font-bricolage text-xl font-light'
           title='Drop us an email'
@@ -33,7 +33,7 @@ const HeroSection = () => (
       </Button>
     </div>
 
-    <div className='mt-16'>
+    <div className='mt-16 lg:hidden'>
       <Image
         alt='hero small'
         height={500}

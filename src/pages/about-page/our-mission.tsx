@@ -29,7 +29,7 @@ const OurMission = () => (
       expectations.
     </p>
 
-    <div className='mt-16 grid grid-cols-2 items-center rounded-[12px] bg-green-100'>
+    <div className='mt-16 grid grid-cols-1 items-center rounded-[12px] bg-green-100 md:grid-cols-2'>
       {MISSIONS.map(({ desc, icon, title }, idx) => (
         <div
           className='p-8'
@@ -65,18 +65,18 @@ const MISSIONS = [
   },
   {
     icon: 'academic.svg',
-    title: 'Unwavering Integrity',
-    desc: 'We believe in transparency, honesty, and accountability. We uphold the highest ethical standards in every interaction, ensuring trust and credibility with our clients and partners.',
+    title: 'Boundless Innovation',
+    desc: 'By wholeheartedly embracing emerging technologies and staying at the forefront of design trends, we deliver solutions that not only shine but also make a mark in a digital world.',
   },
   {
     icon: 'rocket.svg',
-    title: 'Unwavering Integrity',
-    desc: 'We believe in transparency, honesty, and accountability. We uphold the highest ethical standards in every interaction, ensuring trust and credibility with our clients and partners.',
+    title: 'Synergistic Collaboration',
+    desc: 'We work hand-in-hand with our clients, cherishing their invaluable insights and seamlessly blending them with our expertise to create solutions that resonate on a profound level.',
   },
   {
     icon: 'user.svg',
-    title: 'Unwavering Integrity',
-    desc: 'We believe in transparency, honesty, and accountability. We uphold the highest ethical standards in every interaction, ensuring trust and credibility with our clients and partners.',
+    title: 'Relentless Pursuit of Excellence',
+    desc: "Excellence isn't just a goal, it's a relentless pursuit. From the minutest details to the grandest visions, we leave no stone unturned in our quest for perfection.",
   },
 ];
 
