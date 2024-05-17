@@ -58,7 +58,7 @@ const CaseStudy = () => (
         <div className='group relative w-full cursor-pointer overflow-hidden transition-all duration-500 before:absolute before:inset-0 before:z-30 before:size-full before:transition before:duration-300 hover:transition-all before:hover:bg-black/70'>
           <Image
             alt={type}
-            className='transition-all duration-300 group-hover:scale-105'
+            className='rounded-[12px] transition-all duration-300 group-hover:scale-105'
             height={500}
             src={`/images/${src}`}
             width={550}
