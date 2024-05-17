@@ -40,7 +40,7 @@ const NAVLINKS = [
   },
   {
     name: 'Contact Us',
-    href: '/contact-us',
+    href: '/contact',
   },
 ];
 
@@ -95,16 +95,18 @@ export function DrawerBar({
 
               return (
                 <Link key={href} href={href}>
-                  <div
-                    className={cn(
-                      isActive
-                        ? 'bg-dark-400 font-semibold'
-                        : 'bg-transparent font-medium',
-                      'text-lg transition-all p-4 py-3 duration-200 hover:bg-dark-400 active:bg-dark-400 w-full rounded-2xl',
-                    )}
-                  >
-                    {name}
-                  </div>
+                  <DrawerClose asChild>
+                    <div
+                      className={cn(
+                        isActive
+                          ? 'bg-dark-400 font-semibold'
+                          : 'bg-transparent font-medium',
+                        'text-lg transition-all p-4 py-3 duration-200 hover:bg-dark-400 active:bg-dark-400 w-full rounded-2xl',
+                      )}
+                    >
+                      {name}
+                    </div>
+                  </DrawerClose>
                 </Link>
               );
             })}

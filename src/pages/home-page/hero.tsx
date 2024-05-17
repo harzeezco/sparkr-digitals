@@ -7,7 +7,7 @@ import { bricolage } from '../../../app/font';
 
 const HeroSection = () => (
   <section className='container mt-32'>
-    <div className='mx-auto max-w-4xl space-y-4'>
+    <div className='mx-auto flex max-w-4xl flex-col items-center justify-center space-y-4'>
       <h1
         className={cn(
           'text-center text-4xl font-light md:text-5xl lg:text-6xl',
@@ -24,9 +24,25 @@ const HeroSection = () => (
         value by putting your customers at the center of everything we
         do.
       </p>
+
+      <Button className='mb-3 bg-primary px-20 py-4 transition-all hover:bg-green-600 active:bg-green-600'>
+        <AnimatedLink
+          className='font-bricolage text-xl font-light'
+          title='Drop us an email'
+        />
+      </Button>
     </div>
 
-    <div className='mx-auto mt-12 flex max-w-5xl'>
+    <div className='mt-16'>
+      <Image
+        alt='hero small'
+        height={500}
+        src='/images/hero.webp'
+        width={750}
+      />
+    </div>
+
+    <div className='mx-auto mt-12 flex max-w-5xl max-lg:hidden'>
       <Image
         alt='sample'
         className='-mr-20 h-[530px] flex-1'
