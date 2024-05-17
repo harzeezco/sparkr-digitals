@@ -42,6 +42,8 @@
         "no-prototype-builtins": "off",
         "function-paren-newline": "off",
         "newline-per-chained-call": "off",
+        "react/function-component-definition": "off",
+        "@typescript-eslint/no-use-before-define": "off",
         "jsx-quotes": ["error", "prefer-single"],
         "jsx-a11y/no-noninteractive-element-interactions": "off",
         "react/jsx-no-bind": "off",

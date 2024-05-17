@@ -1,9 +1,9 @@
+import Footer from '@/layouts/footer';
+import Header from '@/layouts/header';
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
 
+import { local } from './font';
 import './globals.css';
-
-const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -16,8 +16,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang='en'>
-      <body className={inter.className}>{children}</body>
+    <html className='no-visible-scrollbar' lang='en'>
+      <body
+        className={`${local.className} relative bg-[#EDF5F4] text-[#00542D]`}
+      >
+        <Header />
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }
