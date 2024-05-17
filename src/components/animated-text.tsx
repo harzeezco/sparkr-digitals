@@ -1,5 +1,6 @@
 'use client';
 
+import { cn } from '@/lib/cn';
 import { motion } from 'framer-motion';
 import React from 'react';
 
@@ -29,7 +30,7 @@ const AnimatedWord = ({
 }) => (
   <motion.span
     animate={isHovered ? 'hover' : 'rest'}
-    className='relative whitespace-nowrap'
+    className='relative w-full whitespace-nowrap'
     initial='rest'
     variants={titleAnimation}
   >
@@ -48,12 +49,23 @@ const AnimatedWord = ({
   </motion.span>
 );
 
-export default function AnimatedLink({ title }: { title: string }) {
+export default function AnimatedLink({
+  children,
+  className,
+  title,
+}: {
+  children?: React.ReactNode;
+  className?: string;
+  title: string;
+}) {
   const [isHovered, setHovered] = React.useState(false);
 
   return (
     <motion.div
-      className='relative cursor-pointer overflow-hidden'
+      className={cn(
+        'relative w-full cursor-pointer overflow-hidden',
+        className,
+      )}
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
     >
@@ -62,13 +74,15 @@ export default function AnimatedLink({ title }: { title: string }) {
         isHovered={isHovered}
         title={title}
       />
-      <div className='absolute top-0'>
+      <div className='absolute top-0 w-full'>
         <AnimatedWord
           animation={letterAnimationTwo}
           isHovered={isHovered}
           title={title}
         />
       </div>
+
+      {children}
     </motion.div>
   );
 }

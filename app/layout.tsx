@@ -29,7 +29,7 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <body
-        className={`${myFont.className} ${bricolage.variable} bg-[#EDF5F4]`}
+        className={`${myFont.className} ${bricolage.variable} relative bg-[#EDF5F4] text-[#00542D]`}
       >
         <Header />
         {children}
