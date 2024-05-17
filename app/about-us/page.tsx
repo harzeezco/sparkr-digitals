@@ -1,6 +1,7 @@
 import HeroSection from '@/pages/about-page/hero-section';
 import OpenPosition from '@/pages/about-page/open-position';
 import OurMission from '@/pages/about-page/our-mission';
+import OurStaff from '@/pages/about-page/our-staff';
 import Vision from '@/pages/about-page/vision';
 import Image from 'next/image';
 
@@ -18,6 +19,7 @@ const AboutPage = () => (
         width={1100}
       />
     </div>
+    <OurStaff />
     <OpenPosition />
   </main>
 );
