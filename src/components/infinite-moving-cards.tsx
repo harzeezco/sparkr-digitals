@@ -1,23 +1,18 @@
 'use client';
 
 import { cn } from '@/lib/cn';
-import Image from 'next/image';
 import React, { useEffect, useState } from 'react';
 
 export const InfiniteMovingCards = ({
+  children,
   className,
   direction = 'left',
-  items,
   pauseOnHover = true,
   speed = 'fast',
 }: {
+  children: React.ReactNode;
   className?: string;
   direction?: 'left' | 'right';
-  items: {
-    alt: string;
-    size: number;
-    src: string;
-  }[];
   pauseOnHover?: boolean;
   speed?: 'fast' | 'normal' | 'slow';
 }) => {
@@ -100,20 +95,7 @@ export const InfiniteMovingCards = ({
           pauseOnHover && 'hover:[animation-play-state:paused]',
         )}
       >
-        {items.map(({ alt, size, src }) => (
-          <li
-            key={alt}
-            className='relative max-w-full shrink-0 rounded-2xl border border-b-0'
-          >
-            <Image
-              alt={alt}
-              className='h-full max-h-[450px] rounded-[12px]'
-              height={450}
-              src={`/images/${src}`}
-              width={size}
-            />
-          </li>
-        ))}
+        {children}
       </ul>
     </div>
   );
