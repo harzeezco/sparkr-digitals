@@ -187,11 +187,12 @@ const Header = () => {
         </div>
 
         <div className='max-lg:hidden'>
-          <Button
-            className='bg-primary transition-all hover:bg-green-600 active:bg-green-600'
-            size='lg'
-          >
-            <AnimatedLink title="Let's Talk" />
+          <Button variant='default'>
+            <AnimatedLink
+              className='h-9 w-28 items-center justify-center rounded-[8px] bg-primary text-white transition-all hover:bg-green-600 active:bg-green-600'
+              title="Let's Talk"
+              type='button'
+            />
           </Button>
         </div>
       </div>

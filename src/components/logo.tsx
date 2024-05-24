@@ -8,7 +8,7 @@ const Logo = () => (
       className='max-h-[40px]'
       height={36}
       src='/icons/icon-logo.svg'
-      width={138}
+      width={118}
     />
   </Link>
 );

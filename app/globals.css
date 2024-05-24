@@ -24,3 +24,10 @@
 .no-visible-scrollbar::-webkit-scrollbar {
   display: none;
 }
+
+.slick-arrow {
+  background: #b4ffc9 !important;
+  height: 40px !important;
+  width: 40px !important;
+  border-radius: 50% !important;
+}

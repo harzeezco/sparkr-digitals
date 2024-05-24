@@ -1,5 +1,11 @@
+'use client';
+
 import AnimatedLink from '@/components/animated-text';
+import MotionContainer from '@/components/motion-container';
+import SlideInAnimation from '@/components/slide-in-animation';
 import { cn } from '@/lib/cn';
+import { childVariants } from '@/lib/motion';
+import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -28,26 +34,34 @@ const SUCESSFULBRANDS = [
 
 const SuccessfulBrands = () => (
   <section className='container mt-24 flex flex-col items-center'>
-    <h1
+    <SlideInAnimation
+      as='h1'
       className={cn(
         'mx-auto max-w-xl text-center text-3xl font-light sm:text-4xl lg:text-5xl',
         bricolage.className,
       )}
     >
       Behind Successful Brand Transformation
-    </h1>
+    </SlideInAnimation>
 
-    <Link className='mt-6 font-medium' href='/case-study'>
+    <SlideInAnimation
+      as={Link}
+      className='mt-6 font-medium'
+      href='/case-study'
+    >
       <AnimatedLink
         className='transition duration-200 hover:text-green-500'
         title='See More Case Studies'
       />
       <hr className='border border-[#121718]/70' />
-    </Link>
+    </SlideInAnimation>
 
-    <div className='mt-16 grid max-w-[1100px] grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3'>
+    <MotionContainer className='mt-16 grid max-w-[1100px] grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3'>
       {SUCESSFULBRANDS.map(({ src, title, type }) => (
-        <div className='group relative w-full cursor-pointer overflow-hidden transition-all duration-500 before:absolute before:inset-0 before:z-30 before:size-full before:transition before:duration-300 hover:transition-all before:hover:bg-black/70'>
+        <motion.div
+          className='group relative w-full cursor-pointer overflow-hidden transition-all duration-500 before:absolute before:inset-0 before:z-30 before:size-full before:transition before:duration-300 hover:transition-all before:hover:bg-black/70'
+          variants={childVariants}
+        >
           <Image
             alt={type}
             className='max-h-[500px] transition-all duration-300 group-hover:scale-105'
@@ -73,9 +87,9 @@ const SuccessfulBrands = () => (
               {title}
             </h1>
           </div>
-        </div>
+        </motion.div>
       ))}
-    </div>
+    </MotionContainer>
   </section>
 );
 

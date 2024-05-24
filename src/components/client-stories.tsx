@@ -6,6 +6,7 @@ import Image from 'next/image';
 import Slider from 'react-slick';
 
 import { bricolage } from '../../app/font';
+import SlideInAnimation from './slide-in-animation';
 
 import 'slick-carousel/slick/slick-theme.css';
 import 'slick-carousel/slick/slick.css';
@@ -16,7 +17,8 @@ const ClientStories = () => {
 
   return (
     <section className='mt-24'>
-      <h1
+      <SlideInAnimation
+        as='h1'
         className={cn(
           'mx-auto max-w-2xl text-center text-3xl font-light sm:text-4xl lg:text-5xl max-sm:px-6',
           bricolage.className,
@@ -24,9 +26,9 @@ const ClientStories = () => {
       >
         Words of appreciation: <br /> Our client&apos;s successful
         stories
-      </h1>
+      </SlideInAnimation>
 
-      <div className='mt-14 w-full overflow-x-hidden bg-[#D1FFDE] py-10'>
+      <div className='mt-14 w-full overflow-x-hidden bg-[#F7FFF9] py-10'>
         <div className='relative mx-auto max-w-5xl'>
           <Slider {...settings} ref={sliderRef} aria-live='polite'>
             {TESTIMONIALS.map((testimonial) => (

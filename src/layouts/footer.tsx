@@ -1,6 +1,12 @@
+'use client';
+
 import AnimatedLink from '@/components/animated-text';
+import MotionContainer from '@/components/motion-container';
+import SlideInAnimation from '@/components/slide-in-animation';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/cn';
+import { childVariants } from '@/lib/motion';
+import { motion } from 'framer-motion';
 import Link from 'next/link';
 
 import { bricolage } from '../../app/font';
@@ -10,23 +16,25 @@ const Footer = () => (
     <div className='container'>
       <div className='mx-auto flex max-w-[1050px] justify-between gap-y-10 py-10 max-lg:flex-col'>
         <div>
-          <h1
+          <SlideInAnimation
+            as='h1'
             className={cn(
               'max-w-xl text-white text-3xl font-medium sm:text-4xl lg:text-6xl mb-7',
               bricolage.className,
             )}
           >
             Have an idea? Tell us about it
-          </h1>
+          </SlideInAnimation>
 
-          <Link href='/contact'>
-            <Button
-              className='bg-primary px-8 transition-all hover:bg-green-600 active:bg-green-600'
-              size='lg'
-            >
-              <AnimatedLink className='' title="Let's Talk" />
+          <SlideInAnimation as={Link} href='/contact'>
+            <Button variant='default'>
+              <AnimatedLink
+                className='h-11 w-60 items-center justify-center rounded-[8px] bg-primary font-medium text-white transition-all hover:bg-green-600 active:bg-green-600'
+                title="Let's Talk"
+                type='button'
+              />
             </Button>
-          </Link>
+          </SlideInAnimation>
         </div>
 
         <FooterNav />
@@ -56,9 +64,9 @@ const Footer = () => (
 function FooterNav() {
   return (
     <nav className='mb-10 mt-5'>
-      <ul className='flex flex-col gap-x-20 gap-y-6 md:flex-row lg:justify-between'>
+      <MotionContainer className='flex flex-col gap-x-20 gap-y-6 md:flex-row lg:justify-between'>
         {FOOTER_LINKS.map((details) => (
-          <li key={details.id}>
+          <motion.li key={details.id} variants={childVariants}>
             <h1 className='mb-6 text-xl font-bold text-white'>
               {details.title}
             </h1>
@@ -71,9 +79,9 @@ function FooterNav() {
                 </Link>
               ))}
             </ul>
-          </li>
+          </motion.li>
         ))}
-      </ul>
+      </MotionContainer>
     </nav>
   );
 }

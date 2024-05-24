@@ -12,7 +12,7 @@ const AnimatedLetter = ({
   character: string;
 }) => (
   <motion.span
-    className='relative inline-block whitespace-nowrap'
+    className='relative top-1/4 inline-block whitespace-nowrap'
     variants={animation}
   >
     {character}
@@ -30,7 +30,7 @@ const AnimatedWord = ({
 }) => (
   <motion.span
     animate={isHovered ? 'hover' : 'rest'}
-    className='relative w-full whitespace-nowrap'
+    className='relative whitespace-nowrap'
     initial='rest'
     variants={titleAnimation}
   >
@@ -53,17 +53,19 @@ export default function AnimatedLink({
   children,
   className,
   title,
+  type = '',
 }: {
   children?: React.ReactNode;
   className?: string;
   title: string;
+  type?: string;
 }) {
   const [isHovered, setHovered] = React.useState(false);
 
   return (
     <motion.div
       className={cn(
-        'relative w-full cursor-pointer overflow-hidden',
+        'relative cursor-pointer overflow-hidden',
         className,
       )}
       onMouseEnter={() => setHovered(true)}
@@ -74,7 +76,12 @@ export default function AnimatedLink({
         isHovered={isHovered}
         title={title}
       />
-      <div className='absolute top-0 w-full'>
+      <div
+        className={cn(
+          'absolute w-full',
+          type === 'button' ? 'top-1/4' : 'top-0',
+        )}
+      >
         <AnimatedWord
           animation={letterAnimationTwo}
           isHovered={isHovered}

@@ -1,29 +1,40 @@
+'use client';
+
 import AnimatedLink from '@/components/animated-text';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/cn';
+import { motion } from 'framer-motion';
 import Image from 'next/image';
 
 import { bricolage } from '../../../app/font';
 
 const HeroSection = () => (
-  <section className='container mt-32'>
+  <section className='container mt-36'>
     <div className='mx-auto flex max-w-4xl flex-col items-center justify-center space-y-4'>
-      <h1
+      <motion.h1
+        animate={{ opacity: 1, y: 0 }}
         className={cn(
           'text-center text-4xl font-light md:text-5xl lg:text-6xl',
           bricolage.className,
         )}
+        initial={{ opacity: 0, y: 20 }}
+        transition={{ duration: 0.5, ease: 'easeInOut' }}
       >
         Be the Brand that{' '}
         <span className='text-primary'>Customers</span>{' '}
         <span className='text-primary'>want</span> and{' '}
         <span className='text-primary'>Competitors Envy.</span>
-      </h1>
-      <p className='mx-auto max-w-2xl text-center text-lg lg:text-xl'>
+      </motion.h1>
+      <motion.p
+        animate={{ opacity: 1, y: 0 }}
+        className='mx-auto max-w-2xl text-center text-lg lg:text-xl'
+        initial={{ opacity: 0, y: 20 }}
+        transition={{ duration: 0.5, ease: 'easeInOut' }}
+      >
         With best-in-class design and engineering, our work maximizes
         value by putting your customers at the center of everything we
         do.
-      </p>
+      </motion.p>
 
       <Button className='mb-3 bg-primary px-20 py-4 transition-all hover:bg-green-600 active:bg-green-600 lg:hidden'>
         <AnimatedLink
@@ -42,7 +53,12 @@ const HeroSection = () => (
       />
     </div>
 
-    <div className='mx-auto mt-12 flex max-w-5xl max-lg:hidden'>
+    <motion.div
+      animate={{ opacity: 1, y: 0 }}
+      className='mx-auto mt-12 flex max-w-5xl max-lg:hidden'
+      initial={{ opacity: 0, y: 20 }}
+      transition={{ duration: 0.5, ease: 'easeInOut' }}
+    >
       <Image
         alt='sample'
         className='-mr-20 h-[530px] flex-1'
@@ -67,7 +83,7 @@ const HeroSection = () => (
           />
         </div>
       </div>
-    </div>
+    </motion.div>
   </section>
 );
 
