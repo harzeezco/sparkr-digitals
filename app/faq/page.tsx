@@ -7,8 +7,15 @@ import {
 } from '@/components/ui/accordion';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/cn';
+import type { Metadata } from 'next';
 
 import { bricolage } from '../font';
+
+export const metadata: Metadata = {
+  title: 'Sparkr Digitals - FAQ',
+  description:
+    'Sparkr digitals is a UI/UX agency based. We specialize in UI/UX design, branding, web, mobile development',
+};
 
 const FAQPage = () => (
   <main>
@@ -29,10 +36,11 @@ const FAQPage = () => (
           out, we got your back.
         </p>
 
-        <Button className='mb-3 bg-primary px-24 py-4 transition-all hover:bg-green-600 active:bg-green-600'>
+        <Button variant='default'>
           <AnimatedLink
-            className='font-bricolage text-xl font-light'
+            className='h-11 w-64 items-center justify-center rounded-[8px] bg-primary font-medium text-white transition-all hover:bg-green-600 active:bg-green-600'
             title='Drop us an email'
+            type='button'
           />
         </Button>
       </div>

@@ -66,7 +66,11 @@ function FooterNav() {
     <nav className='mb-10 mt-5'>
       <MotionContainer className='flex flex-col gap-x-20 gap-y-6 md:flex-row lg:justify-between'>
         {FOOTER_LINKS.map((details) => (
-          <motion.li key={details.id} variants={childVariants}>
+          <motion.li
+            key={details.id}
+            className='list-none'
+            variants={childVariants}
+          >
             <h1 className='mb-6 text-xl font-bold text-white'>
               {details.title}
             </h1>

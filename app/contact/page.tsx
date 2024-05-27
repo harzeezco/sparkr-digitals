@@ -1,9 +1,16 @@
 import AnimatedLink from '@/components/animated-text';
 import { cn } from '@/lib/cn';
+import type { Metadata } from 'next';
 import Link from 'next/link';
 
 import { bricolage } from '../font';
 import { ContactForm } from './form';
+
+export const metadata: Metadata = {
+  title: 'Sparkr Digitals - About',
+  description:
+    'Sparkr digitals is a UI/UX agency based. We specialize in UI/UX design, branding, web, mobile development',
+};
 
 const FAQPage = () => (
   <main>

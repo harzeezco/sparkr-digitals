@@ -10,6 +10,7 @@ import {
   DrawerFooter,
   DrawerTrigger,
 } from '@/components/ui/drawer';
+import useLenisScroll from '@/hooks/use-lenis-scroll';
 import { cn } from '@/lib/cn';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -146,6 +147,8 @@ export function DrawerBar({
 
 const Header = () => {
   const pathname = usePathname();
+
+  useLenisScroll();
 
   return (
     <header className='fixed inset-x-0 top-0 z-[9999] bg-[#EDF5F4]'>

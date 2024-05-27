@@ -44,28 +44,28 @@ const ClientStories = () => (
 export const TESTIMONIALS = [
   {
     src: 'anna.webp',
-    text: 'Sparkr digitals team are just amazing. We have had some personal websites and dashboards. The team always delivered on time. The best quality with endless iterations. Good Job!',
+    text: 'Working with Sparkr was a game-changer for us. Their innovative approach and attention to detail helped us boost our online presence and reach our target audience effectively.',
     name: 'Luca Rossi',
     job: 'Chief Technology Officer, CyberSecure Global',
     alt: 'first',
   },
   {
     src: 'ruth.webp',
-    text: 'Sparkr digitals team are just amazing. We have had some personal websites and dashboards. The team always delivered on time. The best quality with endless iterations. Good Job!',
+    text: 'Sparkr exceeded our expectations in every way. Their team not only delivered outstanding results but also provided valuable insights and guidance throughout the project. Highly recommend!',
     name: 'Amara Okafor,',
     job: 'Head of Digital Strategy, E-Comm Universe',
     alt: 'second',
   },
   {
     src: 'paul.webp',
-    text: 'Sparkr digitals team are just amazing. We have had some personal websites and dashboards. The team always delivered on time. The best quality with endless iterations. Good Job!',
+    text: "Sparkr's digital marketing strategies delivered tangible results for our business. Their dedication and creativity helped us stay ahead of the competition and drive meaningful engagement with our audience.",
     name: 'Mia Wong',
     job: 'Marketing Director, EcoHealth Worldwide',
     alt: 'third',
   },
   {
     src: 'ruth.webp',
-    text: 'Sparkr digitals team are just amazing. We have had some personal websites and dashboards. The team always delivered on time. The best quality with endless iterations. Good Job!',
+    text: "Sparkr truly understands the digital landscape. Their tailored approach helped us develop a strong brand identity and connect with our customers on a deeper level. Couldn't be happier with the results!",
     name: 'Aarav Patel',
     job: 'Co-Founder, FinSolutions International',
     alt: 'fourth',
