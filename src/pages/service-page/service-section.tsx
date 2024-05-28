@@ -1,5 +1,11 @@
+'use client';
+
 import AnimatedLink from '@/components/animated-text';
+import MotionContainer from '@/components/motion-container';
+import SlideInAnimation from '@/components/slide-in-animation';
 import { cn } from '@/lib/cn';
+import { childVariants } from '@/lib/motion';
+import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -7,26 +13,31 @@ import { bricolage } from '../../../app/font';
 
 const ServiceSection = () => (
   <section className='container mt-24 flex flex-col items-center'>
-    <h1
+    <SlideInAnimation
+      as='h1'
       className={cn(
         'mx-auto max-w-4xl text-center text-3xl font-light sm:text-4xl lg:text-5xl',
         bricolage.className,
       )}
     >
       Empowering your brand&apos;s success in a competitive world{' '}
-    </h1>
+    </SlideInAnimation>
 
-    <Link className='mt-6 font-medium' href='/case-study'>
+    <SlideInAnimation
+      as={Link}
+      className='mt-6 font-medium'
+      href='/case-study'
+    >
       <AnimatedLink
         className='transition duration-200 hover:text-green-500'
         title='Book a discovery call'
       />
       <hr className='border border-[#121718]/70' />
-    </Link>
+    </SlideInAnimation>
 
-    <div className='mt-16 grid grid-cols-1 items-center rounded-[12px] bg-[#F7FFF9] sm:grid-cols-2 lg:grid-cols-3'>
+    <MotionContainer className='mt-16 grid grid-cols-1 items-center rounded-[12px] bg-[#F7FFF9] sm:grid-cols-2 lg:grid-cols-3'>
       {MISSIONS.map(({ desc, icon, title }) => (
-        <div className='p-8'>
+        <motion.div className='p-8' variants={childVariants}>
           <Image
             alt='icon'
             height={45}
@@ -41,9 +52,9 @@ const ServiceSection = () => (
           <hr className='w-24 border-t border-solid border-[#999] py-3' />
 
           <p>{desc}</p>
-        </div>
+        </motion.div>
       ))}
-    </div>
+    </MotionContainer>
   </section>
 );
 

@@ -1,5 +1,11 @@
+'use client';
+
 import AnimatedLink from '@/components/animated-text';
+import MotionContainer from '@/components/motion-container';
+import SlideInAnimation from '@/components/slide-in-animation';
 import { cn } from '@/lib/cn';
+import { childVariants } from '@/lib/motion';
+import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -22,18 +28,21 @@ const CASESTUDY = [
 
 const Works = () => (
   <section className='container mt-24 flex flex-col items-center'>
-    <h1
+    <motion.h1
       className={cn(
         'mx-auto max-w-xl text-center text-3xl font-light sm:text-4xl lg:text-5xl',
         bricolage.className,
       )}
     >
       Works that we proud of
-    </h1>
+    </motion.h1>
 
-    <div className='mt-16 grid max-w-6xl grid-cols-1 gap-7 md:grid-cols-2'>
+    <MotionContainer className='mb-14 mt-16 grid max-w-6xl grid-cols-1 gap-7 md:grid-cols-2'>
       {CASESTUDY.map(({ desc, src, title, type }) => (
-        <div className='group relative w-full cursor-pointer overflow-hidden transition-all duration-500 before:absolute before:inset-0 before:z-30 before:size-full before:transition before:duration-300 hover:transition-all before:hover:bg-black/70'>
+        <motion.div
+          className='group relative w-full cursor-pointer overflow-hidden transition-all duration-500 before:absolute before:inset-0 before:z-30 before:size-full before:transition before:duration-300 hover:transition-all before:hover:bg-black/70'
+          variants={childVariants}
+        >
           <Image
             alt={type}
             className='max-h-[550px] transition-all duration-300 group-hover:scale-105'
@@ -60,17 +69,21 @@ const Works = () => (
             </h1>
             <p className='text-xl font-medium text-white'>{desc}</p>
           </div>
-        </div>
+        </motion.div>
       ))}
-    </div>
+    </MotionContainer>
 
-    <Link className='mt-14 font-medium' href='/case-study'>
+    <SlideInAnimation
+      as={Link}
+      className='font-medium'
+      href='/case-study'
+    >
       <AnimatedLink
         className='transition duration-200 hover:text-green-500'
         title='See More Case Studies'
       />
       <hr className='border border-[#121718]/70' />
-    </Link>
+    </SlideInAnimation>
   </section>
 );
 
