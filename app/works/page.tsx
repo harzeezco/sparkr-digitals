@@ -13,7 +13,6 @@ const HeroSection = () => (
   <section className='mt-32'>
     <div className='container'>
       <Header />
-
       <Projects />
     </div>
   </section>
