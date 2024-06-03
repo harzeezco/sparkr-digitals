@@ -24,16 +24,10 @@ const SUCESSFULBRANDS = [
     title:
       'The power of User-Centered Design: Crafting Institute Experiences',
   },
-  {
-    type: 'branding',
-    src: 'transfer3.webp',
-    title:
-      'The power of User-Centered Design: Crafting Institute Experiences',
-  },
 ];
 
 const SuccessfulBrands = () => (
-  <section className='container mt-24 flex flex-col items-center'>
+  <section className='container mt-24 flex flex-col items-center lg:px-6'>
     <SlideInAnimation
       as='h1'
       className={cn(
@@ -56,7 +50,7 @@ const SuccessfulBrands = () => (
       <hr className='border border-[#121718]/70' />
     </SlideInAnimation>
 
-    <MotionContainer className='mt-16 grid max-w-[1100px] grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3'>
+    <MotionContainer className='mt-16 grid max-w-[1100px] grid-cols-1 gap-5 md:grid-cols-2'>
       {SUCESSFULBRANDS.map(({ src, title, type }) => (
         <motion.div
           className='group relative w-full cursor-pointer overflow-hidden transition-all duration-500 before:absolute before:inset-0 before:z-30 before:size-full before:transition before:duration-300 hover:transition-all before:hover:bg-black/70'
