@@ -7,7 +7,10 @@ import Link from 'next/link';
 import { bricolage } from '../../../app/font';
 
 const JobSection = () => (
-  <section className='container mt-24 flex flex-col items-center'>
+  <section
+    className='container mt-24 flex flex-col items-center'
+    id='list'
+  >
     <h1
       className={cn(
         'mx-auto max-w-2xl text-center text-3xl font-light sm:text-4xl lg:text-5xl',
