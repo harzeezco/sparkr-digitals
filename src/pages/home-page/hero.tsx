@@ -1,10 +1,11 @@
 'use client';
 
+import AnimatedImage from '@/components/animated-image';
 import AnimatedLink from '@/components/animated-text';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/cn';
 import { motion } from 'framer-motion';
-import Image from 'next/image';
+import Link from 'next/link';
 
 import { bricolage } from '../../../app/font';
 
@@ -35,22 +36,15 @@ const HeroSection = () => (
         value by putting your customers at the center of everything we
         do.
       </motion.p>
-
-      <Button className='mb-3 bg-primary px-20 py-4 transition-all hover:bg-green-600 active:bg-green-600 lg:hidden'>
-        <AnimatedLink
-          className='font-bricolage text-xl font-light'
-          title='Drop us an email'
-        />
-      </Button>
-    </div>
-
-    <div className='mt-16 lg:hidden'>
-      <Image
-        alt='hero small'
-        height={500}
-        src='/images/hero.webp'
-        width={750}
-      />
+      <Link href='/works'>
+        <Button variant='default'>
+          <AnimatedLink
+            className='h-11 w-72 items-center justify-center rounded-[8px] bg-primary font-medium uppercase text-white transition-all hover:bg-green-600 active:bg-green-600'
+            title='Discover our works'
+            type='button'
+          />
+        </Button>
+      </Link>
     </div>
 
     <motion.div
@@ -59,30 +53,13 @@ const HeroSection = () => (
       initial={{ opacity: 0, y: 30 }}
       transition={{ duration: 0.5, ease: 'easeInOut' }}
     >
-      <Image
-        alt='sample'
-        className='-mr-20 h-[530px] flex-1'
-        height={420}
-        src='/images/sample.webp'
-        width={340}
+      <AnimatedImage
+        alt='team meeting'
+        className='max-h-[550px]'
+        height={620}
+        src='/images/hero.webp'
+        width={1200}
       />
-      <div className='-ml-24 flex-1'>
-        <Button className='float-end mb-3 bg-primary !py-4 px-24 transition-all hover:bg-green-600 active:bg-green-600'>
-          <AnimatedLink
-            className='font-bricolage text-xl font-light'
-            title='Discover Our Work'
-          />
-        </Button>
-        <div>
-          <Image
-            alt='sample'
-            className='w-full'
-            height={720}
-            src='/images/dots.webp'
-            width={340}
-          />
-        </div>
-      </div>
     </motion.div>
   </section>
 );

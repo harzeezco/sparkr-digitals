@@ -2,6 +2,7 @@ import AnimatedLink from '@/components/animated-text';
 import { InfiniteMovingCardsDemo } from '@/components/sliding-images';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/cn';
+import Link from 'next/link';
 
 import { bricolage } from '../../../app/font';
 
@@ -17,12 +18,15 @@ const HeroSection = () => (
         Build the future of creative with Sparkr
       </h1>
 
-      <Button className='mb-3 bg-primary px-24 py-4 transition-all hover:bg-green-600 active:bg-green-600'>
-        <AnimatedLink
-          className='font-bricolage text-xl font-light'
-          title='See opening roles'
-        />
-      </Button>
+      <Link href='#list'>
+        <Button variant='default'>
+          <AnimatedLink
+            className='h-11 w-72 items-center justify-center rounded-[8px] bg-primary font-medium text-white transition-all hover:bg-green-600 active:bg-green-600'
+            title='Discover Our Work'
+            type='button'
+          />
+        </Button>
+      </Link>
     </div>
 
     <div className='mx-auto mt-12 flex max-w-6xl'>

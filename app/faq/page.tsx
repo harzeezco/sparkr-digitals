@@ -38,7 +38,7 @@ const FAQPage = () => (
 
         <Button variant='default'>
           <AnimatedLink
-            className='h-11 w-64 items-center justify-center rounded-[8px] bg-primary font-medium text-white transition-all hover:bg-green-600 active:bg-green-600'
+            className='h-11 w-72 items-center justify-center rounded-[8px] bg-primary font-medium text-white transition-all hover:bg-green-600 active:bg-green-600'
             title='Drop us an email'
             type='button'
           />

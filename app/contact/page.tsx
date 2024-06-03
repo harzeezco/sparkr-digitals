@@ -29,7 +29,7 @@ const FAQPage = () => (
           <Link className='mt-6 w-fit font-medium' href='/contact'>
             <AnimatedLink
               className='transition duration-200 hover:text-green-500'
-              title='hello@sparkrstudio.com'
+              title='hello@sparkrdigitals.com'
             />
             <hr className='border border-[#121718]/70' />
           </Link>
