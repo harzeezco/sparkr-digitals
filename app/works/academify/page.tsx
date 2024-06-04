@@ -35,7 +35,7 @@ const Page = () => (
       Management System <br /> through Academify
     </h1>
 
-    <div className='my-10 flex justify-between gap-y-7 max-sm:flex-col sm:items-center'>
+    <div className='my-10 flex justify-between gap-y-7 max-md:flex-col md:items-center'>
       <div>
         <div>
           <span className='opacity-70'>Client</span>

@@ -26,7 +26,10 @@ const FAQPage = () => (
         </h1>
 
         <div className='mb-20 flex gap-x-24 max-sm:flex-col sm:items-center'>
-          <Link className='mt-6 w-fit font-medium' href='/contact'>
+          <Link
+            className='mt-6 w-fit font-medium'
+            href='mailto:hello@sparkrdigitals.com?subject=Pre-filled Subject&body=Please%20enter%20your%20message%20here.'
+          >
             <AnimatedLink
               className='transition duration-200 hover:text-green-500'
               title='hello@sparkrdigitals.com'
