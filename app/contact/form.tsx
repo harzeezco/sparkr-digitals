@@ -1,5 +1,6 @@
 'use client';
 
+import * as React from 'react';
 import AnimatedLink from '@/components/animated-text';
 import { Button } from '@/components/ui/button';
 import {
@@ -19,6 +20,7 @@ import {
   SelectValue,
 } from '@/components/ui/select';
 import { Textarea } from '@/components/ui/textarea';
+import emailjs from '@emailjs/browser';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useForm } from 'react-hook-form';
 import { z } from 'zod';
@@ -79,6 +81,10 @@ const formSchema = z
   );
 
 export function ContactForm() {
+  const [success, setSuccess] = React.useState(false);
+  const [error, setError] = React.useState(false);
+  const [loading, setLoading] = React.useState(false);
+
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -89,10 +95,43 @@ export function ContactForm() {
     },
   });
 
-  // 2. Define a submit handler.
   function onSubmit(values: z.infer<typeof formSchema>, e: any) {
     e.preventDefault();
-    console.log(values);
+    setSuccess(false);
+    setError(false);
+    setLoading(true);
+
+    const template = {
+      name: values.name,
+      user_email: values.user_email,
+      message: values.message,
+      workType: values.workType,
+    };
+
+    emailjs
+      .send(
+        process.env.NEXT_PUBLIC_SERVICE_KEY!,
+        process.env.NEXT_PUBLIC_TEMPLATE_ID!,
+        template,
+        process.env.NEXT_PUBLIC_KEY!,
+      )
+      .then(
+        () => {
+          setSuccess(true);
+          setError(false);
+          setLoading(false);
+          form.reset();
+          setTimeout(() => {
+            setSuccess(false);
+          }, 4000);
+        },
+        (error: any) => {
+          console.log(error);
+          setLoading(false);
+          setSuccess(false);
+          setError(true);
+        },
+      );
   }
 
   return (
@@ -242,14 +281,29 @@ export function ContactForm() {
           )}
         />
 
+        <div>
+          {success && (
+            <p className='text-green-600'>
+              Your message has been sent Successfully. I will soon get
+              back to you.
+            </p>
+          )}
+          {error && (
+            <p className='text-red-500'>
+              Some error occurred. Please send me a direct message
+              using the email bottom 👇
+            </p>
+          )}
+        </div>
+
         <div className='mt-7'>
           <Button
-            className='w-full bg-primary px-24 py-4 transition-all hover:bg-green-600 active:bg-green-600'
+            className='w-full bg-primary px-24 py-4 transition-all hover:bg-green-600 hover:text-white active:bg-green-600'
             type='submit'
           >
             <AnimatedLink
               className='font-bricolage text-xl font-light'
-              title='Send Message'
+              title={loading ? 'Sending...' : 'Send Message'}
             />
           </Button>
         </div>
