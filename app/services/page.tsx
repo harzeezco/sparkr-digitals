@@ -7,7 +7,7 @@ import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Sparkr Digitals - Services',
   description:
-    'Sparkr digitals is a UI/UX agency based. We specialize in UI/UX design, branding, web, mobile development',
+    'Sparkr digitals is a UI/UX agency based in Lagos. We specialize in UI/UX design, branding, web, mobile development',
 };
 
 const ServicePage = () => (

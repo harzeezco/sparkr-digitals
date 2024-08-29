@@ -106,7 +106,7 @@ const PriceSection = () => (
               </p>
 
               <Button
-                className='w-full bg-primary py-3 transition-all hover:bg-green-600 active:bg-green-600'
+                className='w-full bg-primary py-3 transition-all hover:bg-green-600 hover:text-white active:bg-green-600'
                 type='button'
               >
                 <AnimatedLink

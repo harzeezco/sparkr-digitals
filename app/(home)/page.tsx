@@ -9,7 +9,7 @@ import Image from 'next/image';
 export const metadata: Metadata = {
   title: 'Sparkr Digitals - Home',
   description:
-    'Sparkr digitals is a UI/UX agency based. We specialize in UI/UX design, branding, web, mobile development',
+    'Sparkr digitals is a UI/UX agency based in Lagos. We specialize in UI/UX design, branding, web, mobile development',
 };
 
 export default function Home() {
