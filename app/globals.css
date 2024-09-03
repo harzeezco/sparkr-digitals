@@ -31,3 +31,13 @@
   width: 40px !important;
   border-radius: 50% !important;
 }
+
+.bg100 {
+  background: url('/images/image1.png');
+}
+.bg200 {
+  background: url('/images/image2.png');
+}
+.bg300 {
+  background: url('/images/image3.png');
+}

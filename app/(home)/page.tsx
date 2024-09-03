@@ -1,7 +1,7 @@
 import ClientStories from '@/components/client-stories';
 import BrandStories from '@/pages/home-page/brand-stories';
 import CaseStudy from '@/pages/home-page/case-study';
-import Hero from '@/pages/home-page/hero';
+import Hero from '@/pages/home-page/hero-v2';
 import SuccessfulBrands from '@/pages/home-page/successful-brands';
 import type { Metadata } from 'next';
 import Image from 'next/image';
@@ -17,12 +17,14 @@ export default function Home() {
     <main className=''>
       <div className='absolute right-0 top-0 z-[-1]'>
         <Image
-          alt='stroke'
-          height={440}
-          src='/images/stroke.webp'
-          width={640}
+          alt='grid'
+          className=' w-full object-cover'
+          height={36}
+          src='/images/grid.png'
+          width={118}
         />
       </div>
+
       <Hero />
       <CaseStudy />
       <ClientStories />
