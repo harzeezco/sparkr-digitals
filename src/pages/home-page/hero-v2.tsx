@@ -19,11 +19,12 @@ const services = [
 ];
 
 const HeroSection = () => {
+  // useLenisScroll();
   const textOne =
     'Get in touch with Pixel Bloom  . Get in touch with Pixel Bloom  .';
 
   return (
-    <section className='relative z-50 min-h-screen w-full bg-white'>
+    <section className='relative z-50 min-h-screen w-full pb-24 '>
       <div className='container pt-32'>
         <Button className='flex max-w-fit items-center justify-center gap-x-2 rounded-full px-3 py-2 ring-1 ring-gray-200'>
           <FaStar className='text-yellow-300' />
@@ -42,17 +43,18 @@ const HeroSection = () => {
         </h1>
       </div>
 
-      <ul className='my-6 flex items-center gap-x-2 lg:container max-lg:ml-4 max-sm:justify-start'>
-        {services.map((item) => (
-          <li
-            key={item}
-            className='max-w-fit rounded-full px-5 py-2  font-medium text-black ring-1 ring-gray-200 max-lg:shrink-0  max-sm:px-3 max-sm:text-xs '
-          >
-            {item}
-          </li>
-        ))}
-      </ul>
-
+      <div className='max-w-screen overflow-x-auto'>
+        <ul className='my-6 flex items-center  gap-x-2 lg:container max-lg:ml-4 max-sm:justify-start'>
+          {services.map((item) => (
+            <li
+              key={item}
+              className='max-w-fit rounded-full px-5 py-2  font-medium text-black ring-1 ring-gray-200 max-lg:shrink-0  max-sm:px-3 max-sm:text-xs '
+            >
+              {item}
+            </li>
+          ))}
+        </ul>
+      </div>
       <div className='container flex items-center justify-start gap-x-4 max-[430px]:w-full max-[430px]:flex-col max-[430px]:gap-y-5'>
         <Button className='flex items-center justify-center gap-x-2 rounded-full bg-primary px-4 py-3 text-white max-[430px]:w-full'>
           <Image
@@ -125,14 +127,17 @@ const HeroSection = () => {
               lightning-fast results.
             </p>
           </div>
-          <div className='mt-4'>
-            <h1>fast results.</h1>
+          <div className='mb-5 mt-4 text-[#A3A3A3]'>
             <p>
               We consistently exceed expectations, delivering projects
-              that look like they’re coming straight from
+              that look like they’re coming straight from Silicon
+              Valley.
             </p>
           </div>
         </div>
+        <Button className='mx-auto mt-10 max-w-fit rounded-full bg-green-100 px-5 py-3 text-center font-semibold text-primary ring-1 ring-primary max-lg:hidden'>
+          <p>Our Industries</p>
+        </Button>
         <CaseStudy />
       </div>
     </section>
