@@ -43,7 +43,7 @@ const HeroSection = () => {
         </h1>
       </div>
 
-      <div className='max-w-screen overflow-x-auto'>
+      <div className=' overflow-x-auto'>
         <ul className='my-6 flex items-center  gap-x-2 lg:container max-lg:ml-4 max-sm:justify-start'>
           {services.map((item) => (
             <li
@@ -92,7 +92,7 @@ const HeroSection = () => {
           />
         </video>
 
-        <div className='max-sm:size-30 relative left-1/2   flex size-52   -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-white'>
+        <div className=' relative left-1/2   flex size-52   -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-white'>
           <div className='absolute  left-1/2 top-1/2 flex size-28 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-primary max-sm:size-20'>
             <Image
               alt='logo'
@@ -106,7 +106,7 @@ const HeroSection = () => {
             {textOne.split('').map((el, i) => (
               <p
                 key={i}
-                className='text-xs.    absolute font-bold uppercase text-black '
+                className='absolute   text-xs font-bold uppercase text-black '
                 style={{
                   transform: `rotate(${i * 5.5}deg) translateX(80px) rotateZ(${90}deg)`,
 
