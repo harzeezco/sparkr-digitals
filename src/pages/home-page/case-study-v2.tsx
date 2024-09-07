@@ -2,7 +2,7 @@ import Button from '@/components/ui/button-v2';
 
 const CaseStudy = () => (
   <section>
-    <div className='mx-auto grid max-w-[1020px] grid-cols-5 items-end gap-x-4  max-lg:grid-cols-4  max-md:min-h-screen max-md:grid-cols-1 md:h-[70vh] '>
+    <div className='mx-auto grid max-w-[980px] grid-cols-5 items-end gap-x-4  max-lg:grid-cols-4  max-md:min-h-screen max-md:grid-cols-1 md:h-[70vh] '>
       <div className='flex h-full flex-col   gap-y-4'>
         <div className='relative flex h-[70%] flex-col items-start justify-center  rounded-3xl bg-[#6FF896] px-4 font-medium max-md:h-60 max-md:px-10'>
           <div className='box absolute -top-px h-10 w-[50%] rounded-bl-3xl bg-white max-md:left-1/2 max-md:-translate-x-1/2 max-md:rounded-br-3xl md:right-0 md:w-[90px]' />

@@ -92,13 +92,13 @@ const HeroSection = () => {
           />
         </video>
 
-        <div className=' relative left-1/2   flex size-52   -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-white'>
-          <div className='absolute  left-1/2 top-1/2 flex size-28 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-primary max-sm:size-20'>
+        <div className=' relative left-1/2   flex size-44   -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-white'>
+          <div className='absolute  left-1/2 top-1/2 flex size-24 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-primary max-sm:size-20'>
             <Image
               alt='logo'
-              height={24}
+              height={22}
               src='/icons/logo.svg'
-              width={24}
+              width={22}
             />
           </div>
 
@@ -108,7 +108,7 @@ const HeroSection = () => {
                 key={i}
                 className='absolute   text-xs font-bold uppercase text-black '
                 style={{
-                  transform: `rotate(${i * 5.5}deg) translateX(80px) rotateZ(${90}deg)`,
+                  transform: `rotate(${i * 5.5}deg) translateX(65px) rotateZ(${90}deg)`,
 
                   // Adds space between the characters
                 }}
@@ -127,7 +127,7 @@ const HeroSection = () => {
               lightning-fast results.
             </p>
           </div>
-          <div className='mb-5 mt-4 text-[#A3A3A3]'>
+          <div className='mb-10 mt-4 text-[#A3A3A3]'>
             <p>
               We consistently exceed expectations, delivering projects
               that look like they’re coming straight from Silicon
@@ -135,7 +135,7 @@ const HeroSection = () => {
             </p>
           </div>
         </div>
-        <Button className='mx-auto mt-10 max-w-fit rounded-full bg-green-100 px-5 py-3 text-center font-semibold text-primary ring-1 ring-primary max-lg:hidden'>
+        <Button className='mx-auto mt-10 max-w-fit rounded-full bg-green-100 px-5 py-3 text-center font-semibold text-primary shadow-2xl ring-1 ring-primary max-lg:hidden'>
           <p>Our Industries</p>
         </Button>
         <CaseStudy />

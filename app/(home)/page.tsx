@@ -1,4 +1,5 @@
 import Hero from '@/pages/home-page/hero-v2';
+import LogoSection from '@/pages/home-page/logosection';
 import type { Metadata } from 'next';
 import Image from 'next/image';
 
@@ -22,6 +23,7 @@ export default function Home() {
       </div>
 
       <Hero />
+      <LogoSection />
       {/* <CaseStudy /> */}
       {/* <ClientStories /> */}
       {/* <BrandStories /> */}
