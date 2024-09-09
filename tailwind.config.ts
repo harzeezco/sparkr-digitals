@@ -45,6 +45,7 @@ const config = {
           100: 'hsl(0, 0%, 100%)',
         },
       },
+
       keyframes: {
         'accordion-down': {
           from: { height: '0' },

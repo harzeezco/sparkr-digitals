@@ -1,3 +1,5 @@
+
+import Hero from '@/pages/home-page/hero-v2';
 import BrandStories from '@/pages/home-page/brand-stories';
 import Outline from '@/pages/home-page/outline';
 import SuccessfulBrands from '@/pages/home-page/successful-brands';
@@ -11,18 +13,18 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
-    <main className=''>
-      {/* <div className='absolute right-0 top-0 z-[-1]'>
+    <main className='relative bg-white'>
+      <div className='absolute  inset-0  z-50 h-screen w-screen  '>
         <Image
-          alt='stroke'
-          height={440}
-          src='/images/stroke.webp'
-          width={640}ss
+          alt='grid'
+          className=' w-full object-cover'
+          height={36}
+          src='/images/grid.png'
+          width={118}
         />
-      </div> */}
-      {/* <Hero />
-      <CaseStudy />
-      <ClientStories /> */}
+      </div>
+
+      <Hero />
       <BrandStories />
       <SuccessfulBrands />
       <Outline paragraph='We combine strategy, creativity, and technology to exceed your expectations at every step. Our polite, detail-oriented, and creative team works tirelessly to capture your vision and elevate your brand’s online presence.' />

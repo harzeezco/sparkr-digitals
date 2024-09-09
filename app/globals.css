@@ -31,3 +31,139 @@
   width: 40px !important;
   border-radius: 50% !important;
 }
+
+.bg100 {
+  background: url('/images/image1.png') center / cover no-repeat;
+}
+
+.bg200 {
+  background: url('/images/image2.png') center / cover no-repeat;
+}
+
+.bg300 {
+  background: url('/images/image3.png') center / cover no-repeat;
+}
+
+.box2::before {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: transparent;
+  top: 16px;
+  left: 0;
+  transform: translate(0, 100%);
+  border-radius: 50px 0 0 0;
+  box-shadow: -5px -4px 0px white;
+}
+.box3::before {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: transparent;
+  top: 16px;
+  right: 0;
+  transform: translate(0, 100%);
+  border-radius: 0 50px 0 0;
+  box-shadow: 5px -4px 0px white;
+}
+.box::before {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: transparent;
+  top: 0;
+  left: 0;
+  transform: translate(-100%, 0);
+  border-radius: 0 15px 0 0;
+  box-shadow: 5px -3px 0px white;
+}
+.box::after {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: transparent;
+  bottom: 0;
+  right: 0;
+  transform: translate(0, 100%);
+  border-radius: 0 15px 0 0;
+  box-shadow: 7px -4px 0px white;
+}
+@media (max-width: 768px) {
+  .box::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: transparent;
+    top: 0;
+    right: 0;
+    transform: translate(100%, 0);
+    border-radius: 15px 0 0 0;
+    box-shadow: -7px -4px 0px white;
+  }
+}
+
+.box6::before {
+  content: '';
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background: transparent;
+  bottom: 0;
+  left: 0;
+  transform: translate(0, 100%);
+  border-radius: 20px 0 0 0;
+  box-shadow: -9px -6px 0px white;
+}
+.box6::after {
+  content: '';
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background: transparent;
+  top: 0px;
+  right: 0;
+  transform: translate(100%, 0);
+  border-radius: 20px 0 0 0;
+  box-shadow: -9px -6px 0px white;
+}
+
+.custom-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas:
+    'gridone gridtwo gridthree'
+    'gridone gridtwo gridthree'
+    'gridone gridtwo gridthree'
+    'gridfour gridfive gridsix';
+  gap: 10px; /* Optional: Adjust the gap between grid items if needed */
+}
+
+/* Example of how to use the grid areas */
+.gridone {
+  grid-area: gridone;
+}
+
+.gridtwo {
+  grid-area: gridtwo;
+}
+
+.gridthree {
+  grid-area: gridthree;
+}
+
+.gridfour {
+  grid-area: gridfour;
+}
+
+.gridfive {
+  grid-area: gridfive;
+}
+
+.gridsix {
+  grid-area: gridsix;
+}
