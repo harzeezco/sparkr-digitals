@@ -1,11 +1,14 @@
+
 import Hero from '@/pages/home-page/hero-v2';
+import BrandStories from '@/pages/home-page/brand-stories';
+import Outline from '@/pages/home-page/outline';
+import SuccessfulBrands from '@/pages/home-page/successful-brands';
 import type { Metadata } from 'next';
-import Image from 'next/image';
 
 export const metadata: Metadata = {
   title: 'Sparkr Digitals - Home',
   description:
-    'Sparkr digitals is a UI/UX agency based. We specialize in UI/UX design, branding, web, mobile development',
+    'Sparkr digitals is a UI/UX agency based in Lagos. We specialize in UI/UX design, branding, web, mobile development',
 };
 
 export default function Home() {
@@ -22,10 +25,9 @@ export default function Home() {
       </div>
 
       <Hero />
-      {/* <CaseStudy /> */}
-      {/* <ClientStories /> */}
-      {/* <BrandStories /> */}
-      {/* <SuccessfulBrands /> */}
+      <BrandStories />
+      <SuccessfulBrands />
+      <Outline paragraph='We combine strategy, creativity, and technology to exceed your expectations at every step. Our polite, detail-oriented, and creative team works tirelessly to capture your vision and elevate your brand’s online presence.' />
     </main>
   );
 }

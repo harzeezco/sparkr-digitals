@@ -22,7 +22,7 @@ const BrandStories = () => (
 
     <SlideInAnimation
       as='p'
-      className='mx-auto mt-2 max-w-2xl text-center'
+      className='mx-auto mb-6 mt-2 max-w-2xl text-center'
     >
       We are storytellers, weaving narratives that resonate. Our
       mission is to bring your ideas to life and make them shine in
@@ -33,7 +33,7 @@ const BrandStories = () => (
 
     <SlideInAnimation
       as={Link}
-      className='mt-6 font-medium'
+      className='font-medium'
       href='/case-study'
     >
       <AnimatedLink

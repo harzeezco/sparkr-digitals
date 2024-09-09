@@ -29,7 +29,7 @@ const OurMission = () => (
               idx === 0 || idx === 1 || idx === 2 ? '1px' : '0px',
             borderLeft: idx === 0 || idx === 3 ? '0px' : '1px',
             borderStyle: 'solid',
-            borderColor: '#0a0e0e',
+            borderColor: '#999',
           }}
         >
           <Image
