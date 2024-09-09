@@ -70,7 +70,7 @@ const OurStaff = () => (
     <SlideInAnimation
       as={Link}
       className='mt-6 font-medium'
-      href='/case-study'
+      href='/career'
     >
       <AnimatedLink
         className='transition duration-200 hover:text-green-500'

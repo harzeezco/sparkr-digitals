@@ -13,28 +13,32 @@ import { bricolage } from '../../../app/font';
 
 const CASESTUDY = [
   {
-    type: 'Education',
+    type: 'marketing',
     src: 'mockup1.webp',
-    title: 'Future Learning',
-    desc: 'Inspiring Lifelong Learners',
+    title: 'Docker',
+    desc: 'Redefining Marketing tools',
+    href: 'docker',
   },
   {
-    type: 'Education',
+    type: 'education',
     src: 'mockup2.webp',
-    title: 'Future Learning',
-    desc: 'Inspiring Lifelong Learners',
+    title: 'Academify',
+    desc: "Academify's Learning Revolution",
+    href: 'academify',
   },
   {
-    type: 'Education',
-    src: 'mockup3.webp',
-    title: 'Future Learning',
-    desc: 'Inspiring Lifelong Learners',
+    type: 'health care',
+    src: 'mockup5.webp',
+    title: 'nutxer',
+    desc: ' Navigating Inner Peace with NutXer',
+    href: 'nutxer',
   },
   {
-    type: 'Education',
-    src: 'mockup4.webp',
-    title: 'Future Learning',
-    desc: 'Inspiring Lifelong Learners',
+    type: 'health care',
+    src: 'mockup6.webp',
+    title: 'zatum',
+    desc: "Zatum's Health Breakthrough",
+    href: 'zatum',
   },
 ];
 
@@ -47,7 +51,7 @@ const CaseStudy = () => {
       <SlideInAnimation
         as='h1'
         className={cn(
-          'mx-auto max-w-xl text-center text-3xl font-light sm:text-4xl lg:text-5xl',
+          'mx-auto max-w-xl mb-6 text-center text-3xl font-light sm:text-4xl lg:text-5xl',
           bricolage.className,
         )}
       >
@@ -58,8 +62,8 @@ const CaseStudy = () => {
 
       <SlideInAnimation
         as={Link}
-        className='mt-6 font-medium'
-        href='/case-study'
+        className='font-medium'
+        href='/works'
       >
         <AnimatedLink
           className='transition duration-200 hover:text-green-500'
@@ -77,40 +81,42 @@ const CaseStudy = () => {
             initial='hidden'
             variants={containerVariants}
           >
-            {CASESTUDY.map(({ desc, src, title, type }) => (
-              <motion.div
-                className='group relative w-full cursor-pointer overflow-hidden transition-all duration-500 before:absolute before:inset-0 before:z-30 before:size-full before:transition before:duration-300 hover:transition-all before:hover:bg-black/70'
-                variants={childVariants}
-              >
-                <Image
-                  alt={type}
-                  className='rounded-[12px] transition-all duration-300 group-hover:scale-105'
-                  height={500}
-                  src={`/images/${src}`}
-                  width={550}
-                />
+            {CASESTUDY.map(({ desc, href, src, title, type }) => (
+              <Link href={`/works/${href}`}>
+                <motion.div
+                  className='group relative w-full cursor-pointer overflow-hidden transition-all duration-500 before:absolute before:inset-0 before:z-30 before:size-full before:transition before:duration-300 hover:transition-all before:hover:bg-black/70'
+                  variants={childVariants}
+                >
+                  <Image
+                    alt={type}
+                    className='rounded-[12px] transition-all duration-300 group-hover:scale-105'
+                    height={500}
+                    src={`/images/${src}`}
+                    width={550}
+                  />
 
-                <div className='invisible absolute bottom-8 left-16 z-50 flex-col opacity-0 transition duration-500 group-hover:visible group-hover:opacity-100'>
-                  <button
-                    className='rounded-md border border-solid border-green-500 px-5 py-1 text-white'
-                    type='button'
-                  >
-                    {type}
-                  </button>
+                  <div className='invisible absolute bottom-8 left-16 z-50 flex-col opacity-0 transition duration-500 group-hover:visible group-hover:opacity-100'>
+                    <button
+                      className='rounded-md border border-solid border-green-500 px-5 py-1 capitalize text-white'
+                      type='button'
+                    >
+                      {type}
+                    </button>
 
-                  <h1
-                    className={cn(
-                      'mb-2 mt-4 font-bricolage text-3xl font-semibold text-white',
-                      bricolage.className,
-                    )}
-                  >
-                    {title}
-                  </h1>
-                  <p className='text-xl font-medium text-white'>
-                    {desc}
-                  </p>
-                </div>
-              </motion.div>
+                    <h1
+                      className={cn(
+                        'mb-2 mt-4 font-bricolage text-3xl font-semibold text-white',
+                        bricolage.className,
+                      )}
+                    >
+                      {title}
+                    </h1>
+                    <p className='text-xl font-medium text-white'>
+                      {desc}
+                    </p>
+                  </div>
+                </motion.div>
+              </Link>
             ))}
           </motion.div>
         )}

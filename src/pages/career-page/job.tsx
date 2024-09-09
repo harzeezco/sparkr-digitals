@@ -20,7 +20,10 @@ const JobSection = () => (
       We’re hiring and can’t wait to meet you.
     </h1>
 
-    <Link className='mt-6 text-sm font-medium' href='/case-study'>
+    <Link
+      className='mt-6 text-sm font-medium'
+      href='mailto:hello@sparkrdigitals.com?subject=Pre-filled Subject&body=Please%20enter%20your%20message%20here.'
+    >
       <AnimatedLink
         className='transition duration-200 hover:text-green-500'
         title='Drop Us An Email'

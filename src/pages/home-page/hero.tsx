@@ -36,15 +36,21 @@ const HeroSection = () => (
         value by putting your customers at the center of everything we
         do.
       </motion.p>
-      <Link href='/works'>
-        <Button variant='default'>
-          <AnimatedLink
-            className='h-11 w-72 items-center justify-center rounded-[8px] bg-primary font-medium uppercase text-white transition-all hover:bg-green-600 active:bg-green-600'
-            title='Discover our works'
-            type='button'
-          />
-        </Button>
-      </Link>
+      <motion.div
+        animate={{ opacity: 1, y: 0 }}
+        initial={{ opacity: 0, y: 30 }}
+        transition={{ duration: 0.5, ease: 'easeInOut' }}
+      >
+        <Link href='/works'>
+          <Button variant='default'>
+            <AnimatedLink
+              className='h-11 w-72 items-center justify-center rounded-[8px] bg-primary font-medium uppercase text-white transition-all hover:bg-green-600 active:bg-green-600'
+              title='Discover our works'
+              type='button'
+            />
+          </Button>
+        </Link>
+      </motion.div>
     </div>
 
     <motion.div

@@ -42,7 +42,7 @@ const HeroSection = () => (
     >
       <Image
         alt='meeting'
-        className='mx-auto max-h-[500px]'
+        className='mx-auto'
         height={500}
         src='/images/service-hero.webp'
         width={1100}

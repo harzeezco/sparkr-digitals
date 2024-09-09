@@ -49,7 +49,7 @@ const ClientStories = () => {
                   </div>
 
                   <article className='mt-6 md:mt-0'>
-                    <blockquote className='text-xl text-green-600 sm:pb-5 sm:text-[30px] lg:text-[40px] lg:leading-[60px]'>
+                    <blockquote className='text-xl text-green-600 sm:pb-5 sm:text-[30px] lg:text-[35px] lg:leading-[60px]'>
                       {testimonial.text}
                     </blockquote>
                     <div className='pt-6'>
