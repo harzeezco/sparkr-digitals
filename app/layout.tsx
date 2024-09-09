@@ -1,5 +1,5 @@
 import Footer from '@/layouts/footer';
-import Header from '@/layouts/header';
+import Header from '@/layouts/header-v2';
 
 import { local } from './font';
 import './globals.css';
