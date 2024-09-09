@@ -27,7 +27,7 @@ const SUCESSFULBRANDS = [
 ];
 
 const SuccessfulBrands = () => (
-  <section className='container mt-24 flex flex-col items-center lg:px-6'>
+  <section className='container my-24 flex flex-col items-center lg:px-6'>
     <SlideInAnimation
       as='h1'
       className={cn(

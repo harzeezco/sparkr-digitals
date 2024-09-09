@@ -1,10 +1,7 @@
-import ClientStories from '@/components/client-stories';
 import BrandStories from '@/pages/home-page/brand-stories';
-import CaseStudy from '@/pages/home-page/case-study';
-import Hero from '@/pages/home-page/hero';
+import Outline from '@/pages/home-page/outline';
 import SuccessfulBrands from '@/pages/home-page/successful-brands';
 import type { Metadata } from 'next';
-import Image from 'next/image';
 
 export const metadata: Metadata = {
   title: 'Sparkr Digitals - Home',
@@ -15,19 +12,20 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <main className=''>
-      <div className='absolute right-0 top-0 z-[-1]'>
+      {/* <div className='absolute right-0 top-0 z-[-1]'>
         <Image
           alt='stroke'
           height={440}
           src='/images/stroke.webp'
-          width={640}
+          width={640}ss
         />
-      </div>
-      <Hero />
+      </div> */}
+      {/* <Hero />
       <CaseStudy />
-      <ClientStories />
+      <ClientStories /> */}
       <BrandStories />
       <SuccessfulBrands />
+      <Outline paragraph='We combine strategy, creativity, and technology to exceed your expectations at every step. Our polite, detail-oriented, and creative team works tirelessly to capture your vision and elevate your brand’s online presence.' />
     </main>
   );
 }
