@@ -1,3 +1,4 @@
+import AnimatedLink from '@/components/animated-text';
 import Button from '@/components/ui/button-v2';
 import { cn } from '@/lib/cn';
 import Image from 'next/image';
@@ -48,7 +49,7 @@ const HeroSection = () => {
           {services.map((item) => (
             <li
               key={item}
-              className='max-w-fit rounded-full px-5 py-2  font-medium text-black ring-1 ring-gray-200 max-lg:shrink-0  max-sm:px-3 max-sm:text-xs '
+              className='max-w-fit rounded-full px-5 py-2  font-medium text-black ring-1 ring-gray-200 max-lg:shrink-0  max-sm:px-3 max-sm:text-xs  '
             >
               {item}
             </li>
@@ -63,7 +64,7 @@ const HeroSection = () => {
             src='/icons/schedule.svg'
             width={24}
           />
-          <p>Schedule a meet</p>
+          <AnimatedLink title=' Schedule a meet' />
         </Button>
         <Button className='flex items-center justify-center gap-x-2 rounded-full bg-green-100 px-4 py-3 ring-1 ring-primary max-[430px]:w-full'>
           <Image
@@ -71,8 +72,8 @@ const HeroSection = () => {
             height={24}
             src='/icons/discover.svg'
             width={24}
-          />
-          <p>Discover Services</p>
+          />{' '}
+          <AnimatedLink title='Discover Services' />
         </Button>
       </div>
 

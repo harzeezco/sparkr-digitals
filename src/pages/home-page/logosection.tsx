@@ -1,3 +1,4 @@
+import AnimatedLink from '@/components/animated-text';
 import { Button } from '@/components/ui/button';
 import Image from 'next/image';
 
@@ -12,7 +13,7 @@ const LogoSection = () => (
           src='/icons/starIcon.svg'
           width={24}
         />
-        <p>Benefits of choosing us</p>
+        <AnimatedLink title='Benefits of choosing us' />
       </Button>
       <h1 className='mb-12 font-bricolage text-4xl  font-light text-black max-md:max-w-[500px] md:ml-[2vw]   md:text-5xl lg:max-w-[650px] lg:text-6xl'>
         We’ve had the Pleasure to Work with👇🏼
@@ -161,6 +162,6 @@ const LogoSection = () => (
       </div>
     </div>
   </section>
-  );
+);
 
 export default LogoSection;
