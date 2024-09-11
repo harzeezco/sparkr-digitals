@@ -11,9 +11,7 @@ export default function RootLayout({
 }>) {
   return (
     <html className='no-visible-scrollbar' lang='en'>
-      <body
-        className={`${local.className} relative bg-[#EDF5F4] text-[#00542D]`}
-      >
+      <body className={`${local.className} relative text-[#181818]`}>
         <Header />
         {children}
         <Footer />

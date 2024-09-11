@@ -85,8 +85,6 @@ interface CharProps {
 const Char: React.FC<CharProps> = ({ children, progress, range }) => {
   const opacity = useTransform(progress, range, [0, 1]);
 
-  console.log(opacity);
-
   return (
     <>
       <span className='absolute opacity-20'>{children}</span>
