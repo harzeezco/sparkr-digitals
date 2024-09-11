@@ -1,9 +1,9 @@
-
-import Hero from '@/pages/home-page/hero-v2';
 import BrandStories from '@/pages/home-page/brand-stories';
+import Hero from '@/pages/home-page/hero-v2';
 import Outline from '@/pages/home-page/outline';
 import SuccessfulBrands from '@/pages/home-page/successful-brands';
 import type { Metadata } from 'next';
+import Image from 'next/image';
 
 export const metadata: Metadata = {
   title: 'Sparkr Digitals - Home',
