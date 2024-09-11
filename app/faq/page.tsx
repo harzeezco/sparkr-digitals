@@ -8,13 +8,14 @@ import {
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/cn';
 import type { Metadata } from 'next';
+import Link from 'next/link';
 
 import { bricolage } from '../font';
 
 export const metadata: Metadata = {
   title: 'Sparkr Digitals - FAQ',
   description:
-    'Sparkr digitals is a UI/UX agency based. We specialize in UI/UX design, branding, web, mobile development',
+    'Sparkr digitals is a UI/UX agency based in Lagos. We specialize in UI/UX design, branding, web, mobile development',
 };
 
 const FAQPage = () => (
@@ -36,13 +37,15 @@ const FAQPage = () => (
           out, we got your back.
         </p>
 
-        <Button variant='default'>
-          <AnimatedLink
-            className='h-11 w-72 items-center justify-center rounded-[8px] bg-primary font-medium text-white transition-all hover:bg-green-600 active:bg-green-600'
-            title='Drop us an email'
-            type='button'
-          />
-        </Button>
+        <Link href='mailto:hello@sparkrdigitals.com?subject=Pre-filled Subject&body=Please%20enter%20your%20message%20here.'>
+          <Button variant='default'>
+            <AnimatedLink
+              className='h-11 w-72 items-center justify-center rounded-[8px] bg-primary font-medium text-white transition-all hover:bg-green-600 active:bg-green-600'
+              title='Drop us an email'
+              type='button'
+            />
+          </Button>
+        </Link>
       </div>
 
       <div className='mx-auto mt-24 max-w-2xl'>

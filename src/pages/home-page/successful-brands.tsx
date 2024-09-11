@@ -27,22 +27,18 @@ const SUCESSFULBRANDS = [
 ];
 
 const SuccessfulBrands = () => (
-  <section className='container mt-24 flex flex-col items-center lg:px-6'>
+  <section className='container my-24 flex flex-col items-center lg:px-6'>
     <SlideInAnimation
       as='h1'
       className={cn(
-        'mx-auto max-w-xl text-center text-3xl font-light sm:text-4xl lg:text-5xl',
+        'mx-auto max-w-xl mb-6 text-center text-3xl font-light sm:text-4xl lg:text-5xl',
         bricolage.className,
       )}
     >
       Behind Successful Brand Transformation
     </SlideInAnimation>
 
-    <SlideInAnimation
-      as={Link}
-      className='mt-6 font-medium'
-      href='/case-study'
-    >
+    <SlideInAnimation as={Link} className='font-medium' href='/works'>
       <AnimatedLink
         className='transition duration-200 hover:text-green-500'
         title='See More Case Studies'

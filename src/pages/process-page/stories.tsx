@@ -22,6 +22,7 @@ const ClientStories = () => (
             <div className='grid grid-cols-[auto_1fr] place-items-center gap-3'>
               <Image
                 alt={alt}
+                className='rounded-full'
                 height={80}
                 src={`/images/${src}`}
                 width={70}
@@ -64,14 +65,14 @@ export const TESTIMONIALS = [
     alt: 'third',
   },
   {
-    src: 'ruth.webp',
+    src: 'pete.jpg',
     text: "Sparkr truly understands the digital landscape. Their tailored approach helped us develop a strong brand identity and connect with our customers on a deeper level. Couldn't be happier with the results!",
     name: 'Aarav Patel',
     job: 'Co-Founder, FinSolutions International',
     alt: 'fourth',
   },
   {
-    src: 'anna.webp',
+    src: 'annie.jpg',
     text: 'Sparkr digitals team are just amazing. We have had some personal websites and dashboards. The team always delivered on time. The best quality with endless iterations. Good Job!',
     name: 'Liam Murphy',
     job: 'Product Manager, SmartHome International',
