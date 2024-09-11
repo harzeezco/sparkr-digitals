@@ -1,11 +1,12 @@
+import AnimatedLink from '@/components/animated-text';
 import Button from '@/components/ui/button-v2';
 
 const CaseStudy = () => (
   <section>
-    <div className='mx-auto grid max-w-[1020px] grid-cols-5 items-end gap-x-4  max-lg:grid-cols-4  max-md:min-h-screen max-md:grid-cols-1 md:h-[70vh] '>
+    <div className='mx-auto grid max-w-[980px] grid-cols-5 items-end gap-x-4  max-lg:grid-cols-4  max-md:min-h-screen max-md:grid-cols-1 md:h-[70vh] '>
       <div className='flex h-full flex-col   gap-y-4'>
         <div className='relative flex h-[70%] flex-col items-start justify-center  rounded-3xl bg-[#6FF896] px-4 font-medium max-md:h-60 max-md:px-10'>
-          <div className='box absolute -top-px h-10 w-[50%] rounded-bl-3xl bg-white max-md:left-1/2 max-md:-translate-x-1/2 max-md:rounded-br-3xl md:right-0 md:w-[90px]' />
+          <div className='box absolute -top-px h-10 w-1/2 rounded-bl-3xl bg-white max-md:left-1/2 max-md:-translate-x-1/2 max-md:rounded-br-3xl md:right-0 md:w-[90px]' />
           <h1 className='text-3xl font-semibold'>85%</h1>
           <p className='text-sm '>
             Our design solutions are crafted to cater to a diverse
@@ -13,7 +14,7 @@ const CaseStudy = () => (
           </p>
         </div>
         <div className='bg300 box2 relative flex h-[90%] flex-col items-end rounded-3xl bg-cover bg-center bg-no-repeat text-white  max-md:h-[60vh] md:hidden   md:justify-between'>
-          <div className='box6 absolute -top-px left-0 h-14 w-[50%] rounded-br-3xl bg-white md:hidden' />
+          <div className='box6 absolute -top-px left-0 h-14 w-1/2 rounded-br-3xl bg-white md:hidden' />
           <p className='pr-4 pt-3 font-semibold max-md:pr-10 max-md:pt-5'>
             Finance
           </p>
@@ -38,7 +39,7 @@ const CaseStudy = () => (
           Industries We Serve
         </p>
         <Button className='rounded-full bg-[#dbdbdb4f] px-6 py-4 text-center text-white '>
-          <p>Get in touch</p>
+          <AnimatedLink title='Get in touch' />
         </Button>
       </div>
       <div className=' bg200  relative h-[72%] rounded-3xl bg-cover bg-center bg-no-repeat text-end text-black max-md:hidden'>

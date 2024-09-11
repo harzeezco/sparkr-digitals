@@ -1,4 +1,4 @@
-import Footer from '@/layouts/footer';
+import Footer from '@/layouts/footer-v2';
 import Header from '@/layouts/header-v2';
 
 import { local } from './font';
