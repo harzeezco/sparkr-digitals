@@ -19,7 +19,11 @@ export default function Outline({ paragraph }: ParagraphProps) {
     offset: ['start 0.4', 'start 0.15'],
   });
 
-  const words = paragraph.split(' ');
+  let words;
+
+  if (paragraph) {
+    words = paragraph.split(' ');
+  }
 
   return (
     <div className='bg-black'>
@@ -27,7 +31,7 @@ export default function Outline({ paragraph }: ParagraphProps) {
         ref={container}
         className='flex max-w-screen-xl flex-wrap items-center justify-center p-10 text-center text-3xl leading-none text-white sm:text-4xl lg:text-6xl'
       >
-        {words.map((word, i) => {
+        {words?.map((word, i) => {
           const start = i / words.length;
           const end = start + 1 / words.length;
 
