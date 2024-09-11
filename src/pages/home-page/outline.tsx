@@ -25,7 +25,7 @@ export default function Outline({ paragraph }: ParagraphProps) {
     <div className='bg-black'>
       <p
         ref={container}
-        className='flex max-w-screen-xl flex-wrap items-center justify-center p-10 text-center text-6xl leading-none text-white'
+        className='flex max-w-screen-xl flex-wrap items-center justify-center p-10 text-center text-3xl leading-none text-white sm:text-4xl lg:text-6xl'
       >
         {words.map((word, i) => {
           const start = i / words.length;
@@ -84,8 +84,6 @@ interface CharProps {
 
 const Char: React.FC<CharProps> = ({ children, progress, range }) => {
   const opacity = useTransform(progress, range, [0, 1]);
-
-  console.log(opacity);
 
   return (
     <>

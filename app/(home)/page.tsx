@@ -1,7 +1,8 @@
-import BrandStories from '@/pages/home-page/brand-stories';
+import Faq from '@/pages/home-page/faq';
 import Hero from '@/pages/home-page/hero-v2';
+import LogoSection from '@/pages/home-page/logosection';
 import Outline from '@/pages/home-page/outline';
-import SuccessfulBrands from '@/pages/home-page/successful-brands';
+import Projects from '@/pages/home-page/projects';
 import type { Metadata } from 'next';
 import Image from 'next/image';
 
@@ -23,11 +24,11 @@ export default function Home() {
           width={118}
         />
       </div>
-
       <Hero />
-      <BrandStories />
-      <SuccessfulBrands />
+      <Projects />
+      <LogoSection />
       <Outline paragraph='We combine strategy, creativity, and technology to exceed your expectations at every step. Our polite, detail-oriented, and creative team works tirelessly to capture your vision and elevate your brand’s online presence.' />
+      <Faq />
     </main>
   );
 }

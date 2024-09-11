@@ -1,3 +1,4 @@
+import AnimatedLink from '@/components/animated-text';
 import Button from '@/components/ui/button-v2';
 import { cn } from '@/lib/cn';
 import Image from 'next/image';
@@ -48,7 +49,7 @@ const HeroSection = () => {
           {services.map((item) => (
             <li
               key={item}
-              className='max-w-fit rounded-full px-5 py-2  font-medium text-black ring-1 ring-gray-200 max-lg:shrink-0  max-sm:px-3 max-sm:text-xs '
+              className='max-w-fit rounded-full px-5 py-2  font-medium text-black ring-1 ring-gray-200 max-lg:shrink-0  max-sm:px-3 max-sm:text-xs  '
             >
               {item}
             </li>
@@ -63,7 +64,7 @@ const HeroSection = () => {
             src='/icons/schedule.svg'
             width={24}
           />
-          <p>Schedule a meet</p>
+          <AnimatedLink title=' Schedule a meet' />
         </Button>
         <Button className='flex items-center justify-center gap-x-2 rounded-full bg-green-100 px-4 py-3 ring-1 ring-primary max-[430px]:w-full'>
           <Image
@@ -71,8 +72,8 @@ const HeroSection = () => {
             height={24}
             src='/icons/discover.svg'
             width={24}
-          />
-          <p>Discover Services</p>
+          />{' '}
+          <AnimatedLink title='Discover Services' />
         </Button>
       </div>
 
@@ -92,13 +93,13 @@ const HeroSection = () => {
           />
         </video>
 
-        <div className=' relative left-1/2   flex size-52   -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-white'>
-          <div className='absolute  left-1/2 top-1/2 flex size-28 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-primary max-sm:size-20'>
+        <div className=' relative left-1/2   flex size-44   -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-white'>
+          <div className='absolute  left-1/2 top-1/2 flex size-24 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-primary max-sm:size-20'>
             <Image
               alt='logo'
-              height={24}
+              height={22}
               src='/icons/logo.svg'
-              width={24}
+              width={22}
             />
           </div>
 
@@ -108,7 +109,7 @@ const HeroSection = () => {
                 key={i}
                 className='absolute   text-xs font-bold uppercase text-black '
                 style={{
-                  transform: `rotate(${i * 5.5}deg) translateX(80px) rotateZ(${90}deg)`,
+                  transform: `rotate(${i * 5.5}deg) translateX(65px) rotateZ(${90}deg)`,
 
                   // Adds space between the characters
                 }}
@@ -127,7 +128,7 @@ const HeroSection = () => {
               lightning-fast results.
             </p>
           </div>
-          <div className='mb-5 mt-4 text-[#A3A3A3]'>
+          <div className='mb-10 mt-4 text-[#A3A3A3]'>
             <p>
               We consistently exceed expectations, delivering projects
               that look like they’re coming straight from Silicon
@@ -135,7 +136,7 @@ const HeroSection = () => {
             </p>
           </div>
         </div>
-        <Button className='mx-auto mt-10 max-w-fit rounded-full bg-green-100 px-5 py-3 text-center font-semibold text-primary ring-1 ring-primary max-lg:hidden'>
+        <Button className='mx-auto mt-10 max-w-fit rounded-full bg-green-100 px-5 py-3 text-center font-semibold text-primary shadow-2xl ring-1 ring-primary max-lg:hidden'>
           <p>Our Industries</p>
         </Button>
         <CaseStudy />
