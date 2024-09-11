@@ -49,7 +49,7 @@ const Header = () => (
       </nav>
 
       <div className='flex items-center  gap-x-5  max-[430px]:gap-x-2'>
-        <Button className='flex shrink-0   cursor-pointer items-center justify-center gap-x-4 rounded-full p-[6px] pr-2 ring-2 ring-gray-200 max-[430px]:gap-x-2  max-[430px]:p-1 max-[430px]:pr-3 lg:hidden'>
+        <Button className='flex shrink-0 cursor-pointer  items-center justify-center gap-x-4 rounded-full p-[6px] pr-2 text-black ring-2 ring-gray-200 max-[430px]:gap-x-2  max-[430px]:p-1 max-[430px]:pr-3 lg:hidden'>
           <div className='flex size-9  shrink-0 items-center justify-center overflow-hidden rounded-full   ring-2 ring-gray-200'>
             <video autoPlay loop src='gesture.mp4'>
               <track
