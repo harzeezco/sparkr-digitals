@@ -30,7 +30,6 @@ const FAQ = () => (
 
       <div className='mx-auto mt-10 max-w-2xl'>
         <Accordion
-          collapsible
           className='grid w-full grid-cols-1 gap-x-10 gap-y-6'
           type='multiple'
         >
