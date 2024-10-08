@@ -44,6 +44,7 @@ const OpenPosition = () => (
           alt='open position'
           className='max-h-[550px] rounded-[12px] object-cover'
           height={450}
+          loading='lazy'
           src='/images/open-position2.webp'
           width={440}
         />
@@ -56,6 +57,7 @@ const OpenPosition = () => (
           alt='open position'
           className='max-h-[550px] rounded-[12px] object-cover max-md:order-2'
           height={450}
+          loading='lazy'
           src='/images/open-position1.webp'
           width={440}
         />

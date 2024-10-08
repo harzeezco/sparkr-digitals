@@ -44,6 +44,7 @@ const Vision = () => (
             alt={title}
             className='rounded-[12px] transition-all duration-300 hover:scale-105'
             height={500}
+            loading='lazy'
             src={`/images/${src}`}
             width={550}
           />

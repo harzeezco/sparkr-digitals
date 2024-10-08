@@ -16,6 +16,7 @@ export function InfiniteMovingCardsDemo() {
               alt={alt}
               className='h-full max-h-[450px] rounded-[12px]'
               height={450}
+              loading='lazy'
               src={`/images/${src}`}
               width={size}
             />

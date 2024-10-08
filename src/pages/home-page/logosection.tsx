@@ -18,39 +18,12 @@ const LogoSection = () => (
       <h1 className='mb-12 font-bricolage text-4xl  font-light text-black max-md:max-w-[500px] md:ml-[2vw]   md:text-5xl lg:max-w-[650px] lg:text-6xl'>
         We’ve had the Pleasure to Work with👇🏼
       </h1>
-      <div className=' grid items-center justify-center gap-x-5 gap-y-4 opacity-50 max-sm:grid-cols-3 sm:grid-cols-5'>
+      <div className=' mx-auto grid items-center justify-center gap-x-5 gap-y-4 opacity-50 max-sm:grid-cols-3 sm:grid-cols-5 '>
         <Image
           alt='icon'
           className='self-center justify-self-center'
           height={28}
-          src='/icons/cloud.svg'
-          width={130}
-        />
-        <Image
-          alt='icon'
-          className='self-center justify-self-center'
-          height={28}
-          src='/icons/snowflake.svg'
-          width={130}
-        />
-        <Image
-          alt='icon'
-          className='self-center justify-self-center'
-          height={28}
-          src='/icons/zatum.svg'
-          width={130}
-        />
-        <Image
-          alt='icon'
-          className='self-center justify-self-center'
-          height={28}
-          src='/icons/luxebox.svg'
-          width={130}
-        />
-        <Image
-          alt='icon'
-          className='self-center justify-self-center'
-          height={28}
+          loading='lazy'
           src='/icons/leafe.svg'
           width={130}
         />
@@ -58,13 +31,7 @@ const LogoSection = () => (
           alt='icon'
           className='self-center justify-self-center'
           height={28}
-          src='/icons/cactus.svg'
-          width={130}
-        />
-        <Image
-          alt='icon'
-          className='self-center justify-self-center'
-          height={28}
+          loading='lazy'
           src='/icons/yaroo.svg'
           width={130}
         />
@@ -72,6 +39,7 @@ const LogoSection = () => (
           alt='icon'
           className='self-center justify-self-center'
           height={28}
+          loading='lazy'
           src='/icons/renty.svg'
           width={130}
         />
@@ -79,6 +47,7 @@ const LogoSection = () => (
           alt='icon'
           className='self-center justify-self-center'
           height={28}
+          loading='lazy'
           src='/icons/penta.svg'
           width={130}
         />
@@ -86,6 +55,7 @@ const LogoSection = () => (
           alt='icon'
           className='self-center justify-self-center'
           height={28}
+          loading='lazy'
           src='/icons/vision.svg'
           width={130}
         />
@@ -93,6 +63,7 @@ const LogoSection = () => (
           alt='icon'
           className='self-center justify-self-center'
           height={28}
+          loading='lazy'
           src='/icons/craft.svg'
           width={130}
         />
@@ -100,6 +71,7 @@ const LogoSection = () => (
           alt='icon'
           className='self-center justify-self-center'
           height={28}
+          loading='lazy'
           src='/icons/proline.svg'
           width={130}
         />
@@ -107,6 +79,7 @@ const LogoSection = () => (
           alt='icon'
           className='self-center justify-self-center'
           height={28}
+          loading='lazy'
           src='/icons/recharge.svg'
           width={130}
         />
@@ -114,6 +87,7 @@ const LogoSection = () => (
           alt='icon'
           className='self-center justify-self-center'
           height={28}
+          loading='lazy'
           src='/icons/greenish.svg'
           width={130}
         />
@@ -121,6 +95,7 @@ const LogoSection = () => (
           alt='icon'
           className='self-center justify-self-center'
           height={28}
+          loading='lazy'
           src='/icons/nutxer.svg'
           width={130}
         />
@@ -128,6 +103,7 @@ const LogoSection = () => (
           alt='icon'
           className='self-center justify-self-center'
           height={28}
+          loading='lazy'
           src='/icons/redact.svg'
           width={130}
         />
@@ -135,6 +111,7 @@ const LogoSection = () => (
           alt='icon'
           className='self-center justify-self-center'
           height={28}
+          loading='lazy'
           src='/icons/planted.svg'
           width={130}
         />
@@ -142,6 +119,7 @@ const LogoSection = () => (
           alt='icon'
           className='self-center justify-self-center'
           height={28}
+          loading='lazy'
           src='/icons/hues.svg'
           width={130}
         />
@@ -149,6 +127,7 @@ const LogoSection = () => (
           alt='icon'
           className='self-center justify-self-center'
           height={28}
+          loading='lazy'
           src='/icons/docker.svg'
           width={130}
         />
@@ -156,6 +135,7 @@ const LogoSection = () => (
           alt='icon'
           className='self-center justify-self-center'
           height={28}
+          loading='lazy'
           src='/icons/workspc.svg'
           width={130}
         />

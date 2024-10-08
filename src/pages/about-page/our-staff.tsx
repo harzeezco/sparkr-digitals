@@ -89,6 +89,7 @@ const OurStaff = () => (
             alt={title}
             className='rounded-[12px] transition-all duration-300 hover:scale-105'
             height={300}
+            loading='lazy'
             src={`/images/${src}`}
             width={280}
           />

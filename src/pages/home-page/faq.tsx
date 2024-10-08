@@ -49,8 +49,8 @@ const Faq = () => (
     </div>
 
     <Accordion type='single'>
-      <div className='space-y-5 max-sm:space-y-3'>
-        <div className='flex items-start gap-10 max-sm:flex-col'>
+      <div className=' grid grid-cols-2 gap-2 max-sm:grid-cols-1'>
+        <div className='flex flex-col justify-center gap-2 '>
           <AccordionItem
             className='flex-1 rounded-[24px] border border-solid border-[#DCDCDC]'
             value='item-1'
@@ -83,8 +83,7 @@ const Faq = () => (
               solutions based on your specific requirements.
             </AccordionContent>
           </AccordionItem>
-        </div>
-        <div className='flex items-start gap-10 max-sm:flex-col'>
+
           <AccordionItem
             className='flex-1 rounded-[24px] border border-solid border-[#DCDCDC]'
             value='item-3'
@@ -101,6 +100,8 @@ const Faq = () => (
               solutions based on your specific requirements.
             </AccordionContent>
           </AccordionItem>
+        </div>
+        <div className='flex flex-col justify-center gap-2 '>
           <AccordionItem
             className='flex-1 rounded-[24px] border border-solid border-[#DCDCDC]'
             value='item-4'
@@ -117,9 +118,6 @@ const Faq = () => (
               solutions based on your specific requirements.
             </AccordionContent>
           </AccordionItem>
-        </div>
-
-        <div className='flex items-start gap-10 max-sm:flex-col'>
           <AccordionItem
             className='flex-1 rounded-[24px] border border-solid border-[#DCDCDC]'
             value='item-5'

@@ -24,6 +24,7 @@ const ClientStories = () => (
                 alt={alt}
                 className='rounded-full'
                 height={80}
+                loading='lazy'
                 src={`/images/${src}`}
                 width={70}
               />

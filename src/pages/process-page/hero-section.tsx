@@ -29,6 +29,7 @@ const HeroSection = () => (
         alt='meeting'
         className='mx-auto max-h-[500px] rounded-[12px] object-cover'
         height={500}
+        loading='lazy'
         src='/images/process-hero.webp'
         width={1000}
       />

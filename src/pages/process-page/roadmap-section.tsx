@@ -17,6 +17,7 @@ const Roadmap = () => (
               <Image
                 alt='icon'
                 height={60}
+                loading='lazy'
                 src={`/icons/${icon}`}
                 width={45}
               />

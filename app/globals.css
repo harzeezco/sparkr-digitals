@@ -167,3 +167,21 @@
 .gridsix {
   grid-area: gridsix;
 }
+
+.hiddenScroll::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+.hiddenScroll::-webkit-scrollbar-thumb {
+  background: transparent;
+}
+
+.hiddenScroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Firefox */
+.hiddenScroll {
+  scrollbar-width: none;
+}

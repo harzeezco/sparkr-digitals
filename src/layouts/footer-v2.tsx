@@ -4,7 +4,7 @@ import Image from 'next/image';
 import { FaInstagram, FaLinkedin, FaTwitter } from 'react-icons/fa6';
 
 const Footer = () => (
-  <section className='border-none bg-white pt-20 outline-none'>
+  <section className='border-none bg-white pt-20 outline-none  '>
     <div className='container mb-20 h-px rounded-full bg-[#a3a3a32d]' />
     <section className='container'>
       <Button className='mb-4 flex max-w-fit   shrink-0 cursor-pointer items-center justify-center gap-x-4 rounded-full p-[6px] pr-4 text-black  ring-2 ring-gray-200 '>
@@ -126,7 +126,7 @@ const Footer = () => (
         <FormSection />
       </div>
     </section>
-    <section className='bg-[#181818] py-10'>
+    <section className='bg-[#181818] py-10  '>
       <div className='container'>
         <div className='grid grid-cols-2 items-center justify-between max-md:grid-cols-1 '>
           <div className='flex flex-col items-start justify-center'>

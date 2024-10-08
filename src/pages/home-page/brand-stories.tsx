@@ -48,6 +48,7 @@ const BrandStories = () => (
         alt='brand'
         className='max-h-[550px] w-full'
         height={500}
+        loading='lazy'
         src='/images/brand1.webp'
         width={650}
       />
@@ -55,6 +56,7 @@ const BrandStories = () => (
         alt='brand'
         className='max-h-[550px] w-full'
         height={300}
+        loading='lazy'
         src='/images/brand2.webp'
         width={450}
       />

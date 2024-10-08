@@ -38,6 +38,7 @@ const JobSection = () => (
             <Image
               alt='icon'
               height={35}
+              loading='lazy'
               src={`/icons/${icon}`}
               width={35}
             />

@@ -48,35 +48,38 @@ const Projects = () => (
     </div>
 
     <div>
-      <div className='flex h-dvh items-center justify-center bg-[#FFFAF5] py-10'>
+      <div className='sticky top-0 flex h-dvh items-center justify-center bg-[#FFFAF5] py-10'>
         <Link href='/works/docker'>
           <Image
             alt=''
-            height={456}
+            height={466}
+            loading='lazy'
             src='/images/project1.png'
-            width={665}
+            width={975}
           />
         </Link>
       </div>
 
-      <div className='flex h-dvh items-center justify-center bg-[#EDFFFE]'>
+      <div className='sticky top-0 flex h-dvh items-center justify-center bg-[#edfffe00]'>
         <Link href='/works/academify'>
           <Image
             alt=''
-            height={456}
+            height={466}
+            loading='lazy'
             src='/images/project2.png'
-            width={665}
+            width={975}
           />
         </Link>
       </div>
 
-      <div className='flex h-dvh items-center justify-center bg-[#E4E3FD]'>
+      <div className='sticky top-0 flex h-dvh items-center justify-center  bg-[#edfffe00]'>
         <Link href='/works/zatum'>
           <Image
             alt=''
-            height={456}
+            height={466}
+            loading='lazy'
             src='/images/project3.png'
-            width={665}
+            width={975}
           />
         </Link>
       </div>

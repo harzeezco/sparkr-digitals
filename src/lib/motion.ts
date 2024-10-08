@@ -19,13 +19,13 @@ export const containerVariants = {
 
 export const childVariants = {
   hidden: {
-    scale: 0,
+    translateY: 0,
   },
   visible: {
     scale: 1,
     transition: {
       type: 'tween',
-      duration: 0.2,
+      duration: 0.5,
       ease: 'easeInOut',
     },
   },

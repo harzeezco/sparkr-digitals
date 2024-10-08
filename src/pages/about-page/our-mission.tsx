@@ -54,6 +54,7 @@ const OurMission = () => (
           <Image
             alt='icon'
             height={45}
+            loading='lazy'
             src={`/icons/${icon}`}
             width={45}
           />
